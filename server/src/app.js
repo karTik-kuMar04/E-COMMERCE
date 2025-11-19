@@ -27,12 +27,17 @@ app.use(cors(
 
 {/** ROUTEs */}
     // Auth Route
-import { authRouter } from './routes/auth.route.js';
-app.use("/api/auth", authRouter)
+    import { authRouter } from './routes/auth.route.js';
+    app.use("/api/auth", authRouter)
+
+    // user route
+    import { userRouter } from './routes/user.route.js';
+    app.use("/user", userRouter)
+
 
     // /health check
-app.get('/health', (_, res) => {
-    res.json({message: "API is running"})
-})
+    app.get('/health', (_, res) => {
+        res.json({message: "API is running"})
+    })
 
 export default app

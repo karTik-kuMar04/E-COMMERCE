@@ -23,7 +23,10 @@ const env = {
     PG_HOST: requireENV("PG_HOST"),
     PG_DATABASE: requireENV("PG_DATABASE"),
     PG_PASSKEY: requireENV("PG_PASSKEY"),
-    PG_PORT: requireENV("PG_PORT")
+    PG_PORT: requireENV("PG_PORT"),
+
+    JWT_SECRET: requireENV("JWT_SECRET"),
+    JWT_REFRESH_SECRET: requireENV("JWT_REFRESH_SECRET")
 }
 
 export default env

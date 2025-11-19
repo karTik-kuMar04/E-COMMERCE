@@ -16,9 +16,14 @@ const env = {
     PORT: process.env.PORT,
 
     // client variable's
-    CORS_ORIGIN: requireENV("CORS_ORIGIN")
+    CORS_ORIGIN: requireENV("CORS_ORIGIN"),
 
     // database variable's
+    PG_USER: requireENV("PG_USER"),
+    PG_HOST: requireENV("PG_HOST"),
+    PG_DATABASE: requireENV("PG_DATABASE"),
+    PG_PASSKEY: requireENV("PG_PASSKEY"),
+    PG_PORT: requireENV("PG_PORT")
 }
 
 export default env

@@ -1,14 +1,14 @@
 import pkg from 'pg';
-import logger from '../utils/logger.js'
+import { env } from '../config/index.js';
 
 const { Pool } = pkg;
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'mydb',
-    password: 'kartik123',
-    port: 5432
+    user: env.PG_USER,
+    host: env.PG_HOST,
+    database: env.PG_DATABASE,
+    password: env.PG_PASSKEY,
+    port: env.PG_PORT 
 });
 
 

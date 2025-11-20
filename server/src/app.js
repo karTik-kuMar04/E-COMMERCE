@@ -3,6 +3,8 @@ import cors from 'cors';
 import { env } from './config/index.js';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser'
+import { authRouter } from './routes/auth.route.js';
+import { userRouter } from './routes/user.route.js';
 
 
 const app = express();
@@ -11,7 +13,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
-app.use(helmet())
+app.use(helmet({
+    crossOriginResourcePolicy: false
+}))
 app.use(cors(
     {
         origin: env.CORS_ORIGIN,
@@ -27,11 +31,11 @@ app.use(cors(
 
 {/** ROUTEs */}
     // Auth Route
-    import { authRouter } from './routes/auth.route.js';
+    
     app.use("/api/auth", authRouter)
 
     // user route
-    import { userRouter } from './routes/user.route.js';
+    
     app.use("/user", userRouter)
 
 

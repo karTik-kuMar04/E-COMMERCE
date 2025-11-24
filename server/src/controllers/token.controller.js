@@ -14,8 +14,14 @@ export const refreshAccessToken = async (req, res) => {
         jwt.verify(refreshToken, env.JWT_REFRESH_SECRET, async (err, decoded) => {
             if (err) return res.status(403).json({ message: "Invalid Refresh Token" });
 
-            const user = await findUserByEmail(decoded.id);
-            if (!user) return res.status(404).json({ message: "user not found"})
+            const user = await findUserByEmail(decoded.email);
+            if (!user) return res.status(404).json({ message: "user not found"});
+
+
+            if (user.refresh_token !== refreshToken) {
+                res.clearCookie("refreshToken");
+                return res.status(401).json({ message: "Token mismatch or expired" });
+            };
 
             const newAccesToken = genrateAccessToken(user);
             return res.status(201).json({ accessToken: newAccesToken})

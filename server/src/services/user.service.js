@@ -1,9 +1,9 @@
 import pool from "../database/db.js";
 
-const createUser = async (name, email, hashedPassword) => {
+const createUser = async (name, email, hashedPassword, refresh_token) => {
     const query = `
-        INSERT INTO users (name, email, password)
-        VALUES ($1, $2, $3)
+        INSERT INTO users (name, email, password, refresh_token)
+        VALUES ($1, $2, $3, $4)
         RETURNING id, name, email
     `;
 

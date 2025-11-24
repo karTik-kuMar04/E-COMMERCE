@@ -19,8 +19,9 @@ const register = async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
+        const refresh_token = genrateRefreshToken({ email });
 
-        const user = await createUser(name, email, hashedPassword)
+        const user = await createUser(name, email, hashedPassword, refresh_token)
 
         res.status(201).json(
             {

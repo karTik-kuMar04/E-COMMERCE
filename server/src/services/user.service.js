@@ -20,7 +20,13 @@ const findUserByEmail = async (email) => {
     return result.rows[0]
 }
 
+const updateRefreshToken = async (id, token) => {
+    const query = `UPDATE users SELECT refresh_token = $1 WHERE id = $2`;
+    await pool.query(query, [id, token]);
+}
+
 export {
     createUser,
-    findUserByEmail
+    findUserByEmail,
+    updateRefreshToken
 }

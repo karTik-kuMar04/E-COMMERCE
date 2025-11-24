@@ -4,8 +4,6 @@ import { Router } from "express";
 export const userRouter = Router()
 
 userRouter.get("/profile", authMiddleware, (req, res) => {
-    res.json({
-        message: 'welcome to your profile',
-        user: req.user
-    })
-} )
+  if (!req.user) return res.status(204).send();
+  res.status(200).json({ user: req.user });
+});

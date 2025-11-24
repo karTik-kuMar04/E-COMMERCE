@@ -37,6 +37,8 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
     try {
+
+
         const { email, password } = req.body;
 
         
@@ -53,21 +55,26 @@ const login = async (req, res) => {
             return res.status(400).json({message: "password is incorrect! Try Again"})
         }
 
-        const AccessToken = genrateAccessToken(user);
-        const RefreshToken = genrateRefreshToken(user);
+        const accessToken = genrateAccessToken(user);
+        const refreshToken = genrateRefreshToken(user);
 
-        res.cookie("refreshToken", RefreshToken, {
+        const COOKIE_OPTIONS = {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict",
+            secure: false,       // ⚠️ false in development (http), true only in production (https)
+            sameSite: "lax",
             path: "/",
-            maxAge: 7 * 24 * 60 * 60 * 1000
-        })
+        };
+
+
+        res.cookie("accessToken", accessToken, COOKIE_OPTIONS);
+        res.cookie("refreshToken", refreshToken, { 
+            ...COOKIE_OPTIONS, 
+            maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
+        });
 
         res.status(201).json(
             {
                 message: "Log-in Successfully",
-                AccessToken,
                 user: {
                     id: user.id,
                     name: user.name,
@@ -83,8 +90,28 @@ const login = async (req, res) => {
     }
 }
 
+const logout = async (req, res) => {
+  try {
+    const COOKIE_OPTIONS = {
+      httpOnly: true,
+      secure: false,   // change to true in production https only
+      sameSite: "lax",
+      path: "/",
+    };
+
+    res.clearCookie("accessToken", COOKIE_OPTIONS);
+    res.clearCookie("refreshToken", COOKIE_OPTIONS);
+
+    return res.status(200).json({ message: "Logged out successfully" });
+  } catch (err) {
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+
 
 export {
     register,
-    login
+    login,
+    logout
 }

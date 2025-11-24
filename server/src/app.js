@@ -12,20 +12,21 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser())
+
 app.use(helmet({
     crossOriginResourcePolicy: false
 }))
-app.use(cors(
-    {
-        origin: env.CORS_ORIGIN,
-        credentials: true,
-        methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-        allowedHeaders: ["Content-Type", "Authorization"],
-        exposedHeaders: ["Authorization"],
-        maxAge: 600
-    }
-));
+app.use(
+  cors({
+    origin: env.CORS_ORIGIN, // must be exactly http://localhost:3000
+    credentials: true,       // REQUIRED for cookies
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+    maxAge: 600,
+  })
+);
+app.use(cookieParser())
+
 
 
 

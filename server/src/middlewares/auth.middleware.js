@@ -1,17 +1,19 @@
-import jwt from 'jsonwebtoken'
-import { env } from '../config/index.js'
+import jwt from "jsonwebtoken";
+import { env } from "../config/index.js";
 
-export const authMiddleware = async (req, res, next) => {
-    const token = req.headers.authorization?.split(" ")[1]; // Bearer token
+export const authMiddleware = (req, res, next) => {
+  try {
+    const token = req.cookies?.accessToken; // 👈 read from cookies
 
     if (!token) {
-        return res.status(401).json({ message: "No token provided" })
+      return res.status(401).json({ message: "No token provided" });
     }
 
-    jwt.verify(token, env.JWT_SECRET, (err, user) => {
-        if (err) return res.status(403).json({ message: "Invalid Token"});
+    const decoded = jwt.verify(token, env.JWT_SECRET);
+    req.user = decoded; // attach decoded user
+    next();
 
-        req.user = user;
-        next();
-    })
-}
+  } catch (err) {
+    return res.status(401).json({ message: "Invalid or Expired Token" });
+  }
+};

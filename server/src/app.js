@@ -31,18 +31,19 @@ app.use(cookieParser())
 
 
 {/** ROUTEs */}
-    // Auth Route
-    
-    app.use("/api/auth", authRouter)
 
-    // user route
-    
-    app.use("/user", userRouter)
+// Auth Route
+app.use("/api/auth", authRouter)
 
+// User Routes
+app.use("/user", userRouter)
 
-    // /health check
-    app.get('/health', (_, res) => {
-        res.json({message: "API is running"})
-    })
+// Books Routes
+app.use('/book', bookRouter)
+
+// /health check
+app.get('/health', (_, res) => {
+    res.json({message: "API is running"})
+})
 
 export default app

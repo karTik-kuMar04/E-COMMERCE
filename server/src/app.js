@@ -3,9 +3,9 @@ import cors from 'cors';
 import { env } from './config/index.js';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser'
-import { authRouter } from './routes/auth.route.js';
-import { userRouter } from './routes/user.route.js';
-
+import authRouter from './routes/auth.route.js';
+import userRouter from './routes/user.route.js';
+import bookRouter from './routes/books.route.js';
 
 const app = express();
 

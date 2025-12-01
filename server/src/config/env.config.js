@@ -25,8 +25,14 @@ const env = {
     PG_PASSKEY: requireENV("PG_PASSKEY"),
     PG_PORT: requireENV("PG_PORT"),
 
+    // JWT Secret
     JWT_SECRET: requireENV("JWT_SECRET"),
-    JWT_REFRESH_SECRET: requireENV("JWT_REFRESH_SECRET")
+    JWT_REFRESH_SECRET: requireENV("JWT_REFRESH_SECRET"),
+
+    // Cloudinary Secrets
+    CLOUDINARY_NAME: requireENV("CLOUDINARY_NAME"),
+    CLOUDINARY_API_KEY: requireENV("CLOUDINARY_KEY"),
+    CLOUDINARY_API_SECRET: requireENV("CLOUDINARY_SECRET")
 }
 
 export default env

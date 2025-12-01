@@ -1,17 +1,21 @@
-import cloudianry from "../config/cloudinary.js";
+import cloudinary from "../config/cloudinary.js";
 import streamifier from 'streamifier';
 
 export const uploadToCloudinary = async (fileBuffer, folder) => {
-
     return new Promise((resolve, reject) => {
-        let stream = cloudianry.uploader.upload_stream(
-            {folder}, 
+        const stream = cloudinary.uploader.upload_stream(
+            { folder },
             (err, result) => {
-                if (result) resolve(result);
-                else reject(err)
-
+                if (err) return reject(err);
+                return resolve(result); // includes secure_url & public_id
             }
-        )
-        streamifier.createReadStream(fileBuffer).pipe(stream)
-    })
+        );
+
+        streamifier.createReadStream(fileBuffer).pipe(stream);
+    });
+};
+
+
+export const deleteFromCloudinary = async (publicId) => {
+    return await cloudinary.uploader.destroy(publicId);
 }

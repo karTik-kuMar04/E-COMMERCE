@@ -1,6 +1,6 @@
-import pool from "../database/db.js";
-import { uploadToCloudinary, deleteFromCloudinary } from "../utils/uploadToCloudinary.js";
-import logger from '../utils/logger.js'
+import pool from "../../database/db.js";
+import { uploadToCloudinary, deleteFromCloudinary } from "../../utils/uploadToCloudinary.js";
+import logger from '../../utils/logger.js'
 
 const addBook = async (req, res) => {
     const client = await pool.connect();
@@ -15,38 +15,47 @@ const addBook = async (req, res) => {
 
         const files = req.files;
 
-        const images = { cover: null, back: null, interior: [] };
+        let images = { cover: null, back: null, interior: [] };
 
-        if (files.cover) {
-            const coverUpload = await uploadToCloudinary(files.cover[0].buffer, "E-commerce/books");
-            
-            if (!coverUpload.secure_url) throw new Error("Failed to upload cover image");
+        if (req.body.images) {
+            const parsedImages = typeof req.body.images === "string"
+                ? JSON.parse(req.body.images)
+                : req.body.images;
 
-            images.cover = coverUpload.secure_url;
-            uploadedPublicIds.push(coverUpload.public_id);
-        }
+            images.cover = parsedImages.cover || null;
+            images.back = parsedImages.back || null;
+            images.interior = parsedImages.interior || [];
+        } else {
+            // 2️⃣ Otherwise, fall back to Cloudinary uploads (normal API behaviour)
 
-        if (files.back) {
-            const backUpload = await uploadToCloudinary(files.back[0].buffer, "E-commerce/books");
-            
-            if (!backUpload.secure_url) throw new Error("Failed to upload back image");
-            
-            images.back = backUpload.secure_url;
-            uploadedPublicIds.push(backUpload.public_id)
-        }
+            if (files.cover && files.cover[0]) {
+                const coverUpload = await uploadToCloudinary(files.cover[0].buffer, "E-commerce/books");
+                if (!coverUpload.secure_url) throw new Error("Failed to upload cover image");
 
-        if (files.interior) {
-            for (const img of files.interior) {
-                const uploaded = await uploadToCloudinary(img.buffer, "E-commerce/books/interior");
-                if (!uploaded.secure_url) {
-                    throw new Error("Failed to upload interior image");
+                images.cover = coverUpload.secure_url;
+                uploadedPublicIds.push(coverUpload.public_id);
+            }
+
+            if (files.back && files.back[0]) {
+                const backUpload = await uploadToCloudinary(files.back[0].buffer, "E-commerce/books");
+                if (!backUpload.secure_url) throw new Error("Failed to upload back image");
+
+                images.back = backUpload.secure_url;
+                uploadedPublicIds.push(backUpload.public_id);
+            }
+
+            if (files.interior && files.interior.length > 0) {
+                for (const img of files.interior) {
+                    const uploaded = await uploadToCloudinary(img.buffer, "E-commerce/books/interior");
+                    if (!uploaded.secure_url) {
+                        throw new Error("Failed to upload interior image");
+                    }
+
+                    images.interior.push(uploaded.secure_url);
+                    uploadedPublicIds.push(uploaded.public_id);
                 }
-
-                images.interior.push(uploaded.secure_url);
-                uploadedPublicIds.push(uploaded.public_id)
             }
         }
-
 
         const parsedFormat = typeof formats === 'string' ? JSON.parse(formats) : formats;
 

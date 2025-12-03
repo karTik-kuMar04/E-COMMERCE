@@ -1,0 +1,2692 @@
+[
+  {
+    "title": "Naruto, Vol. 1",
+    "subtitle": "Uzumaki Naruto",
+    "description": "The journey of Naruto begins.",
+    "publisher": "VIZ Media",
+    "publication_date": "2003-08-06",
+    "isbn10": "1569319006",
+    "isbn13": "9781569319000",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "Naruto Series",
+    "author_bio": "Masashi Kishimoto is a Japanese manga artist.",
+    "authors": [
+      "Masashi Kishimoto"
+    ],
+    "tags": [
+      "action"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK1-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK1-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK1-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 192,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "One Piece, Vol. 1",
+    "subtitle": "Romance Dawn",
+    "description": "Luffy dreams of becoming the Pirate King.",
+    "publisher": "VIZ Media",
+    "publication_date": "2003-06-01",
+    "isbn10": "1569319014",
+    "isbn13": "9781569319017",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "One Piece",
+    "author_bio": "Eiichiro Oda is a Japanese manga artist.",
+    "authors": [
+      "Eiichiro Oda"
+    ],
+    "tags": [
+      "adventure"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK2-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 216,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK2-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 216,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK2-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 216,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Demon Slayer, Vol. 1",
+    "subtitle": "Cruelty",
+    "description": "Tanjiro begins his demon-hunting journey.",
+    "publisher": "VIZ Media",
+    "publication_date": "2018-07-03",
+    "isbn10": "1974700530",
+    "isbn13": "9781974700530",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "Demon Slayer",
+    "author_bio": "Gotouge is a Japanese manga artist.",
+    "authors": [
+      "Koyoharu Gotouge"
+    ],
+    "tags": [
+      "dark fantasy"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK3-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK3-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK3-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 192,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Jujutsu Kaisen, Vol. 1",
+    "subtitle": "Ryomen Sukuna",
+    "description": "Yuji Itadori enters the world of curses.",
+    "publisher": "VIZ Media",
+    "publication_date": "2019-12-03",
+    "isbn10": "1974710020",
+    "isbn13": "9781974710027",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "Jujutsu Kaisen",
+    "author_bio": "Gege Akutami is a Japanese manga artist.",
+    "authors": [
+      "Gege Akutami"
+    ],
+    "tags": [
+      "supernatural"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK4-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK4-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK4-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 192,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Attack on Titan, Vol. 1",
+    "subtitle": "",
+    "description": "Humanity fights Titans.",
+    "publisher": "Kodansha",
+    "publication_date": "2012-03-06",
+    "isbn10": "1612620248",
+    "isbn13": "9781612620244",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "Attack on Titan",
+    "author_bio": "Isayama is a Japanese manga artist.",
+    "authors": [
+      "Hajime Isayama"
+    ],
+    "tags": [
+      "post-apocalyptic"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK5-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 193,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK5-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 193,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK5-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 193,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Death Note, Vol. 1",
+    "subtitle": "Boredom",
+    "description": "Light discovers the Death Note.",
+    "publisher": "VIZ Media",
+    "publication_date": "2005-10-10",
+    "isbn10": "1421501686",
+    "isbn13": "9781421501680",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "Death Note",
+    "author_bio": "Ohba is a mysterious manga writer.",
+    "authors": [
+      "Tsugumi Ohba"
+    ],
+    "tags": [
+      "psychological"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK6-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 200,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK6-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 200,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK6-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 200,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Chainsaw Man, Vol. 1",
+    "subtitle": "Dog & Chainsaw",
+    "description": "Denji merges with Chainsaw Devil.",
+    "publisher": "VIZ Media",
+    "publication_date": "2020-10-06",
+    "isbn10": "1974709930",
+    "isbn13": "9781974709930",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "Chainsaw Man",
+    "author_bio": "Fujimoto is known for dark storytelling.",
+    "authors": [
+      "Tatsuki Fujimoto"
+    ],
+    "tags": [
+      "horror"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK7-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK7-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK7-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 192,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Tokyo Ghoul, Vol. 1",
+    "subtitle": "",
+    "description": "Kaneki becomes half-ghoul.",
+    "publisher": "VIZ Media",
+    "publication_date": "2015-06-16",
+    "isbn10": "1421580365",
+    "isbn13": "9781421580364",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "Tokyo Ghoul",
+    "author_bio": "Ishida is a Japanese manga creator.",
+    "authors": [
+      "Sui Ishida"
+    ],
+    "tags": [
+      "dark"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK8-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 224,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK8-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 224,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK8-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 224,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Blue Lock, Vol. 1",
+    "subtitle": "",
+    "description": "Elite striker program in Japan begins.",
+    "publisher": "Kodansha",
+    "publication_date": "2022-03-22",
+    "isbn10": "1646516543",
+    "isbn13": "9781646516544",
+    "genre": "Sports Manga",
+    "edition": "1st Edition",
+    "series": "Blue Lock",
+    "author_bio": "Kaneshiro is a Japanese writer.",
+    "authors": [
+      "Muneyuki Kaneshiro"
+    ],
+    "tags": [
+      "sports"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK9-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK9-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK9-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 208,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "My Hero Academia, Vol. 1",
+    "subtitle": "",
+    "description": "Izuku wants to be a hero.",
+    "publisher": "VIZ Media",
+    "publication_date": "2015-08-04",
+    "isbn10": "1421582694",
+    "isbn13": "9781421582696",
+    "genre": "Manga",
+    "edition": "1st Edition",
+    "series": "MHA",
+    "author_bio": "Horikoshi is a Japanese manga artist.",
+    "authors": [
+      "Kohei Horikoshi"
+    ],
+    "tags": [
+      "superhero"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK10-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK10-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 192,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK10-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 192,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "subtitle": "",
+    "description": "Harry enters Hogwarts.",
+    "publisher": "Bloomsbury",
+    "publication_date": "1997-06-26",
+    "isbn10": "0747532699",
+    "isbn13": "9780747532743",
+    "genre": "Fantasy",
+    "edition": "1st Edition",
+    "series": "Harry Potter",
+    "author_bio": "Rowling is a British author.",
+    "authors": [
+      "J.K. Rowling"
+    ],
+    "tags": [
+      "magic"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK11-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 332,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK11-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 332,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK11-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 332,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Hobbit",
+    "subtitle": "There and Back Again",
+    "description": "Bilbo joins a quest.",
+    "publisher": "Allen & Unwin",
+    "publication_date": "1937-09-21",
+    "isbn10": "0345339681",
+    "isbn13": "9780345339683",
+    "genre": "Fantasy",
+    "edition": "1st Edition",
+    "series": "Middle Earth",
+    "author_bio": "Tolkien is father of modern fantasy.",
+    "authors": [
+      "J.R.R. Tolkien"
+    ],
+    "tags": [
+      "adventure"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK12-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 310,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK12-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 310,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK12-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 310,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Alchemist",
+    "subtitle": "",
+    "description": "Santiago searches for his destiny.",
+    "publisher": "HarperTorch",
+    "publication_date": "1988-05-01",
+    "isbn10": "0061122416",
+    "isbn13": "9780061122415",
+    "genre": "Fiction",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Coelho is a Brazilian novelist.",
+    "authors": [
+      "Paulo Coelho"
+    ],
+    "tags": [
+      "inspirational"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK13-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK13-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK13-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 208,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Hunger Games",
+    "subtitle": "",
+    "description": "Katniss fights in deadly games.",
+    "publisher": "Scholastic",
+    "publication_date": "2008-09-14",
+    "isbn10": "0439023483",
+    "isbn13": "9780439023481",
+    "genre": "Dystopian",
+    "edition": "1st Edition",
+    "series": "Hunger Games",
+    "author_bio": "Collins is an American novelist.",
+    "authors": [
+      "Suzanne Collins"
+    ],
+    "tags": [
+      "dystopia"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK14-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 384,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK14-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 384,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK14-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 384,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "subtitle": "",
+    "description": "A love story between teens with cancer.",
+    "publisher": "Dutton",
+    "publication_date": "2012-01-10",
+    "isbn10": "0525478817",
+    "isbn13": "9780525478812",
+    "genre": "Romance",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Green is an American author.",
+    "authors": [
+      "John Green"
+    ],
+    "tags": [
+      "romance"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK15-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 313,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK15-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 313,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK15-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 313,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Percy Jackson: The Lightning Thief",
+    "subtitle": "",
+    "description": "Percy discovers he is a demigod.",
+    "publisher": "Disney Hyperion",
+    "publication_date": "2005-06-28",
+    "isbn10": "0786838655",
+    "isbn13": "9780786838653",
+    "genre": "Fantasy",
+    "edition": "1st Edition",
+    "series": "Percy Jackson",
+    "author_bio": "Riordan writes mythology adventures.",
+    "authors": [
+      "Rick Riordan"
+    ],
+    "tags": [
+      "mythology"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK16-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 400,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK16-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 400,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK16-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 400,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Lord of the Rings: Fellowship of the Ring",
+    "subtitle": "",
+    "description": "Frodo begins the journey to destroy the One Ring.",
+    "publisher": "Allen & Unwin",
+    "publication_date": "1954-07-29",
+    "isbn10": "0395489318",
+    "isbn13": "9780395489314",
+    "genre": "Fantasy",
+    "edition": "1st Edition",
+    "series": "LOTR",
+    "author_bio": "Tolkien is a legendary author.",
+    "authors": [
+      "J.R.R. Tolkien"
+    ],
+    "tags": [
+      "epic fantasy"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK17-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 432,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK17-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 432,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK17-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 432,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Sherlock Holmes: A Study in Scarlet",
+    "subtitle": "",
+    "description": "The first Sherlock Holmes case.",
+    "publisher": "Ward Lock",
+    "publication_date": "1887-11-01",
+    "isbn10": "1508475311",
+    "isbn13": "9781508475318",
+    "genre": "Mystery",
+    "edition": "1st Edition",
+    "series": "Sherlock Holmes",
+    "author_bio": "Doyle is a British writer.",
+    "authors": [
+      "Arthur Conan Doyle"
+    ],
+    "tags": [
+      "detective"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK18-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 188,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK18-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 188,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK18-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 188,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "1984",
+    "subtitle": "",
+    "description": "A dystopian future under total surveillance.",
+    "publisher": "Secker & Warburg",
+    "publication_date": "1949-06-08",
+    "isbn10": "0451524934",
+    "isbn13": "9780451524935",
+    "genre": "Dystopian",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Orwell is a British novelist.",
+    "authors": [
+      "George Orwell"
+    ],
+    "tags": [
+      "dystopia"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK19-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 328,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK19-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 328,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK19-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 328,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "subtitle": "",
+    "description": "A powerful story of justice and racism.",
+    "publisher": "J.B. Lippincott",
+    "publication_date": "1960-07-11",
+    "isbn10": "0446310786",
+    "isbn13": "9780446310789",
+    "genre": "Fiction",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Lee is an American novelist.",
+    "authors": [
+      "Harper Lee"
+    ],
+    "tags": [
+      "classic"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK20-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 336,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK20-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 336,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK20-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 336,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Clean Code",
+    "subtitle": "",
+    "description": "A guide to writing clean software.",
+    "publisher": "Prentice Hall",
+    "publication_date": "2008-08-01",
+    "isbn10": "0132350882",
+    "isbn13": "9780132350884",
+    "genre": "Programming",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Martin is a software engineer.",
+    "authors": [
+      "Robert C. Martin"
+    ],
+    "tags": [
+      "software"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK21-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 464,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK21-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 464,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK21-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 464,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "You Don't Know JS: Scope & Closures",
+    "subtitle": "",
+    "description": "Deep dive on JavaScript internals.",
+    "publisher": "O'Reilly",
+    "publication_date": "2014-03-10",
+    "isbn10": "1491904151",
+    "isbn13": "9781491904152",
+    "genre": "Programming",
+    "edition": "1st Edition",
+    "series": "YDKJS",
+    "author_bio": "Simpson writes JS books.",
+    "authors": [
+      "Kyle Simpson"
+    ],
+    "tags": [
+      "javascript"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK22-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 98,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK22-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 98,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK22-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 98,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Eloquent JavaScript",
+    "subtitle": "",
+    "description": "A modern introduction to JavaScript.",
+    "publisher": "No Starch Press",
+    "publication_date": "2018-12-04",
+    "isbn10": "1593279507",
+    "isbn13": "9781593279509",
+    "genre": "Programming",
+    "edition": "3rd Edition",
+    "series": "",
+    "author_bio": "Haverbeke is a programmer.",
+    "authors": [
+      "Marijn Haverbeke"
+    ],
+    "tags": [
+      "javascript"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK23-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 472,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK23-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 472,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK23-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 472,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Designing Data-Intensive Applications",
+    "subtitle": "",
+    "description": "Modern data systems explained.",
+    "publisher": "O'Reilly",
+    "publication_date": "2017-04-02",
+    "isbn10": "1449373321",
+    "isbn13": "9781449373320",
+    "genre": "Technology",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Kleppmann is a researcher.",
+    "authors": [
+      "Martin Kleppmann"
+    ],
+    "tags": [
+      "system design"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK24-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 616,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK24-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 616,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK24-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 616,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Introduction to Algorithms",
+    "subtitle": "",
+    "description": "The classic algorithms textbook.",
+    "publisher": "MIT Press",
+    "publication_date": "2009-07-31",
+    "isbn10": "0262033844",
+    "isbn13": "9780262033848",
+    "genre": "Computer Science",
+    "edition": "3rd Edition",
+    "series": "CLRS",
+    "author_bio": "Cormen is a CS professor.",
+    "authors": [
+      "Thomas H. Cormen"
+    ],
+    "tags": [
+      "algorithms"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK25-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 1312,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK25-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 1312,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK25-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 1312,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "subtitle": "",
+    "description": "Timeless software development wisdom.",
+    "publisher": "Addison-Wesley",
+    "publication_date": "1999-10-20",
+    "isbn10": "020161622X",
+    "isbn13": "9780201616224",
+    "genre": "Programming",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Hunt is a software engineer.",
+    "authors": [
+      "Andrew Hunt",
+      "David Thomas"
+    ],
+    "tags": [
+      "software"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK26-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 352,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK26-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 352,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK26-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 352,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Cracking the Coding Interview",
+    "subtitle": "",
+    "description": "Coding interview preparation.",
+    "publisher": "CareerCup",
+    "publication_date": "2015-07-01",
+    "isbn10": "0984782850",
+    "isbn13": "9780984782857",
+    "genre": "Programming",
+    "edition": "6th Edition",
+    "series": "",
+    "author_bio": "Gayle is a former Google engineer.",
+    "authors": [
+      "Gayle Laakmann McDowell"
+    ],
+    "tags": [
+      "interview"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK27-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 706,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK27-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 706,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK27-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 706,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Refactoring",
+    "subtitle": "",
+    "description": "Improving design of existing code.",
+    "publisher": "Addison-Wesley",
+    "publication_date": "2018-11-19",
+    "isbn10": "0134757599",
+    "isbn13": "9780134757599",
+    "genre": "Programming",
+    "edition": "2nd Edition",
+    "series": "",
+    "author_bio": "Fowler is a software architect.",
+    "authors": [
+      "Martin Fowler"
+    ],
+    "tags": [
+      "software"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK28-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 448,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK28-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 448,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK28-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 448,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Head First Design Patterns",
+    "subtitle": "",
+    "description": "A beginner-friendly guide to design patterns.",
+    "publisher": "O'Reilly",
+    "publication_date": "2004-10-25",
+    "isbn10": "0596007124",
+    "isbn13": "9780596007126",
+    "genre": "Programming",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Freeman is an author and engineer.",
+    "authors": [
+      "Eric Freeman"
+    ],
+    "tags": [
+      "design patterns"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK29-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 694,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK29-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 694,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK29-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 694,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Python Crash Course",
+    "subtitle": "",
+    "description": "Hands-on Python introduction.",
+    "publisher": "No Starch Press",
+    "publication_date": "2019-05-03",
+    "isbn10": "1593279280",
+    "isbn13": "9781593279288",
+    "genre": "Programming",
+    "edition": "2nd Edition",
+    "series": "",
+    "author_bio": "Matthes is a programmer.",
+    "authors": [
+      "Eric Matthes"
+    ],
+    "tags": [
+      "python"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK30-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 544,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK30-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 544,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK30-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 544,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Atomic Habits",
+    "subtitle": "",
+    "description": "A guide to building good habits.",
+    "publisher": "Penguin",
+    "publication_date": "2018-10-16",
+    "isbn10": "0735211299",
+    "isbn13": "9780735211292",
+    "genre": "Self-help",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Clear is a habits expert.",
+    "authors": [
+      "James Clear"
+    ],
+    "tags": [
+      "self-help"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK31-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 320,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK31-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 320,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK31-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 320,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Rich Dad Poor Dad",
+    "subtitle": "",
+    "description": "Lessons on money and investing.",
+    "publisher": "Plata Publishing",
+    "publication_date": "1997-04-01",
+    "isbn10": "1612680194",
+    "isbn13": "9781612680194",
+    "genre": "Finance",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Kiyosaki is an investor.",
+    "authors": [
+      "Robert Kiyosaki"
+    ],
+    "tags": [
+      "finance"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK32-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 336,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK32-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 336,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK32-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 336,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Psychology of Money",
+    "subtitle": "",
+    "description": "Timeless lessons about money.",
+    "publisher": "Harriman House",
+    "publication_date": "2020-09-08",
+    "isbn10": "0857197681",
+    "isbn13": "9780857197689",
+    "genre": "Finance",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Housel is a finance writer.",
+    "authors": [
+      "Morgan Housel"
+    ],
+    "tags": [
+      "finance"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK33-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 252,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK33-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 252,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK33-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 252,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Think and Grow Rich",
+    "subtitle": "",
+    "description": "Principles of success and mindset.",
+    "publisher": "The Ralston Society",
+    "publication_date": "1937-08-01",
+    "isbn10": "1585424331",
+    "isbn13": "9781585424337",
+    "genre": "Self-help",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Hill is a motivational writer.",
+    "authors": [
+      "Napoleon Hill"
+    ],
+    "tags": [
+      "mindset"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK34-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 320,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK34-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 320,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK34-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 320,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Deep Work",
+    "subtitle": "",
+    "description": "Rules for focused success.",
+    "publisher": "Grand Central",
+    "publication_date": "2016-01-05",
+    "isbn10": "1455586692",
+    "isbn13": "9781455586691",
+    "genre": "Productivity",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Newport is a CS professor.",
+    "authors": [
+      "Cal Newport"
+    ],
+    "tags": [
+      "productivity"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK35-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 296,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK35-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 296,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK35-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 296,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "subtitle": "",
+    "description": "A counterintuitive approach to living well.",
+    "publisher": "Harper",
+    "publication_date": "2016-09-13",
+    "isbn10": "0062457713",
+    "isbn13": "9780062457714",
+    "genre": "Self-help",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Manson is a blogger and author.",
+    "authors": [
+      "Mark Manson"
+    ],
+    "tags": [
+      "self-help"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK36-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 224,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK36-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 224,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK36-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 224,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Sapiens",
+    "subtitle": "A Brief History of Humankind",
+    "description": "The story of humankind.",
+    "publisher": "Harper",
+    "publication_date": "2011-06-04",
+    "isbn10": "0062316095",
+    "isbn13": "9780062316097",
+    "genre": "History",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Harari is a historian.",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "tags": [
+      "history"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK37-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 498,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK37-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 498,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK37-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 498,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Ikigai",
+    "subtitle": "The Japanese Secret to a Long and Happy Life",
+    "description": "Finding purpose through Ikigai.",
+    "publisher": "Penguin",
+    "publication_date": "2016-01-01",
+    "isbn10": "0143130722",
+    "isbn13": "9780143130727",
+    "genre": "Self-help",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Both are authors and researchers.",
+    "authors": [
+      "H\u00e9ctor Garc\u00eda",
+      "Francesc Miralles"
+    ],
+    "tags": [
+      "self-help"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK38-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK38-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK38-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 208,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Man\u2019s Search for Meaning",
+    "subtitle": "",
+    "description": "A memoir of finding meaning.",
+    "publisher": "Beacon Press",
+    "publication_date": "1946-01-01",
+    "isbn10": "0807014273",
+    "isbn13": "9780807014271",
+    "genre": "Psychology",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Frankl was a psychiatrist.",
+    "authors": [
+      "Viktor E. Frankl"
+    ],
+    "tags": [
+      "psychology"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK39-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 200,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK39-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 200,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK39-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 200,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Power of Habit",
+    "subtitle": "",
+    "description": "Understanding the science of habits.",
+    "publisher": "Random House",
+    "publication_date": "2012-02-28",
+    "isbn10": "1400069289",
+    "isbn13": "9781400069286",
+    "genre": "Self-help",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Duhigg is a journalist.",
+    "authors": [
+      "Charles Duhigg"
+    ],
+    "tags": [
+      "psychology"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK40-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 371,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK40-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 371,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK40-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 371,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Batman: Year One",
+    "subtitle": "",
+    "description": "Batman's origin story reimagined.",
+    "publisher": "DC Comics",
+    "publication_date": "1987-02-01",
+    "isbn10": "1401207529",
+    "isbn13": "9781401207526",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "Batman",
+    "author_bio": "Miller is a comic legend.",
+    "authors": [
+      "Frank Miller"
+    ],
+    "tags": [
+      "superhero"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK41-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 144,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK41-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 144,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK41-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 144,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Watchmen",
+    "subtitle": "",
+    "description": "A dark look at costumed heroes.",
+    "publisher": "DC Comics",
+    "publication_date": "1986-09-01",
+    "isbn10": "0930289234",
+    "isbn13": "9780930289232",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Moore is a graphic novelist.",
+    "authors": [
+      "Alan Moore"
+    ],
+    "tags": [
+      "superhero"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK42-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 416,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK42-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 416,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK42-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 416,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Spider-Man: Blue",
+    "subtitle": "",
+    "description": "Peter Parker reflects on Gwen Stacy.",
+    "publisher": "Marvel",
+    "publication_date": "2002-07-01",
+    "isbn10": "0785110707",
+    "isbn13": "9780785110705",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "Spider-Man",
+    "author_bio": "Loeb is a comics writer.",
+    "authors": [
+      "Jeph Loeb"
+    ],
+    "tags": [
+      "superhero"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK43-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 144,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK43-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 144,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK43-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 144,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "The Walking Dead, Vol. 1",
+    "subtitle": "Days Gone Bye",
+    "description": "A zombie outbreak survival tale.",
+    "publisher": "Image Comics",
+    "publication_date": "2004-05-10",
+    "isbn10": "1582406723",
+    "isbn13": "9781582406725",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "Walking Dead",
+    "author_bio": "Kirkman is a comic creator.",
+    "authors": [
+      "Robert Kirkman"
+    ],
+    "tags": [
+      "zombies"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK44-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 144,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK44-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 144,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK44-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 144,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "X-Men: Dark Phoenix Saga",
+    "subtitle": "",
+    "description": "Jean Grey becomes the Phoenix.",
+    "publisher": "Marvel",
+    "publication_date": "1980-01-01",
+    "isbn10": "0785108188",
+    "isbn13": "9780785108184",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "X-Men",
+    "author_bio": "Claremont is a comics writer.",
+    "authors": [
+      "Chris Claremont"
+    ],
+    "tags": [
+      "superhero"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK45-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 200,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK45-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 200,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK45-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 200,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "V for Vendetta",
+    "subtitle": "",
+    "description": "A rebellion against a totalitarian regime.",
+    "publisher": "Vertigo",
+    "publication_date": "1988-03-01",
+    "isbn10": "1401207928",
+    "isbn13": "9781401207922",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "",
+    "author_bio": "Moore is a graphic novelist.",
+    "authors": [
+      "Alan Moore"
+    ],
+    "tags": [
+      "dystopia"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK46-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 296,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK46-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 296,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK46-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 296,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Saga, Vol. 1",
+    "subtitle": "",
+    "description": "A space opera about forbidden love.",
+    "publisher": "Image Comics",
+    "publication_date": "2012-10-23",
+    "isbn10": "1607066017",
+    "isbn13": "9781607066019",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "Saga",
+    "author_bio": "Vaughan is a writer.",
+    "authors": [
+      "Brian K. Vaughan"
+    ],
+    "tags": [
+      "sci-fi"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK47-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 160,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK47-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 160,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK47-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 160,
+        "is_digital": true
+      }
+    ]
+  },
+  {
+    "title": "Civil War",
+    "subtitle": "",
+    "description": "A conflict between heroes over freedom vs safety.",
+    "publisher": "Marvel",
+    "publication_date": "2007-01-01",
+    "isbn10": "078512179X",
+    "isbn13": "9780785121794",
+    "genre": "Comics",
+    "edition": "1st Edition",
+    "series": "Marvel Events",
+    "author_bio": "Millar is a comics writer.",
+    "authors": [
+      "Mark Millar"
+    ],
+    "tags": [
+      "superhero"
+    ],
+    "awards": [],
+    "images": {
+      "cover": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600813/cover_firqeq.png",
+      "back": "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600819/back_cxt0ej.png",
+      "interior": [
+        "https://res.cloudinary.com/dirii8ccg/image/upload/v1764600818/interior_vkk6uu.png"
+      ]
+    },
+    "formats": [
+      {
+        "format": "Paperback",
+        "sku": "BOOK48-PB",
+        "price": 299,
+        "list_price": 349,
+        "stock": 12,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Hardcover",
+        "sku": "BOOK48-HC",
+        "price": 499,
+        "list_price": 599,
+        "stock": 7,
+        "page_count": 208,
+        "is_digital": false
+      },
+      {
+        "format": "Ebook",
+        "sku": "BOOK48-EB",
+        "price": 199,
+        "list_price": 249,
+        "stock": 999,
+        "page_count": 208,
+        "is_digital": true
+      }
+    ]
+  }
+]

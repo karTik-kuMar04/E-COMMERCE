@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addBook } from "../controllers/book.controller.js";
+import { addBook } from "../controllers/books/addBook.controller.js";
 import { upload } from "../middlewares/upload.middleware.js";
 
 const bookRouter = Router();

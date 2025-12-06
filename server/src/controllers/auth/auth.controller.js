@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
-import { createUser, findUserByEmail, updateRefreshToken } from '../services/user.service.js';
-import logger from '../utils/logger.js'
-import { genrateAccessToken, genrateRefreshToken } from '../utils/token.js';
+import { createUser, findUserByEmail, updateRefreshToken } from '../../services/user.service.js';
+import logger from '../../utils/logger.js'
+import { genrateAccessToken, genrateRefreshToken } from '../../utils/token.js';
 
 
 

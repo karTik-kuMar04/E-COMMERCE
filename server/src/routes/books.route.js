@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addBook } from "../controllers/books/addBook.controller.js";
+import { addBook, getBookById, getBooks, getHomeBooks } from "../controllers/index.js";
 import { upload } from "../middlewares/upload.middleware.js";
 
 const bookRouter = Router();
@@ -13,5 +13,7 @@ bookRouter.post(
     ]),
     addBook
 )
-
+bookRouter.get("/home", getHomeBooks);
+bookRouter.get("/", getBooks);
+bookRouter.get("/:id", getBookById);
 export default bookRouter

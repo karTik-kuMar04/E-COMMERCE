@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
-import { env } from "../config/index.js";
-import { findUserByEmail } from "../services/user.service.js";
-import { genrateAccessToken } from "../utils/token.js";
+import { env } from "../../config/index.js";
+import { findUserByEmail } from "../../services/user.service.js";
+import { genrateAccessToken } from "../../utils/token.js";
 
 export const refreshAccessToken = async (req, res) => {
     try {

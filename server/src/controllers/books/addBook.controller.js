@@ -2,7 +2,7 @@ import pool from "../../database/db.js";
 import { uploadToCloudinary, deleteFromCloudinary } from "../../utils/uploadToCloudinary.js";
 import logger from '../../utils/logger.js'
 
-const addBook = async (req, res) => {
+export const addBook = async (req, res) => {
     const client = await pool.connect();
 
     const uploadedPublicIds = [];
@@ -126,8 +126,4 @@ const addBook = async (req, res) => {
     }finally{
         client.release();
     }
-}
-
-export {
-    addBook
 }

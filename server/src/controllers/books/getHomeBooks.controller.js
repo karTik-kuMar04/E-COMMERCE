@@ -14,7 +14,8 @@ export const getHomeBooks = async (req, res) => {
                 b.images,
                 b.authors,
                 b.publication_date,
-                MIN(f.price) AS min_price
+                MIN(f.price) AS min_price,
+                MIN(f.stock) AS total_stock
             FROM books b
             LEFT JOIN book_formats f ON f.book_id = b.id
             GROUP BY b.id
@@ -31,8 +32,9 @@ export const getHomeBooks = async (req, res) => {
                 b.images,
                 b.authors,
                 b.publication_date,
-                MIN(f.price) AS min_price
-            FROM book b
+                MIN(f.price) AS min_price,
+                MIN(f.stock) AS total_stock
+            FROM books b
             LEFT JOIN book_formats f ON f.book_id = b.id
             GROUP BY b.id
             ORDER BY RANDOM()

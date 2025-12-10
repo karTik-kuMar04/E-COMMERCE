@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-brand-border;
+  }
+  
+  body {
+    @apply bg-brand-bg text-brand-muted font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-brand-primary;
+  }
+  
+  h1 {
+    @apply text-display-1;
+  }
+  
+  h2 {
+    @apply text-display-2;
+  }
+  
+  h3 {
+    @apply text-display-3;
+  }
+}
+
+@layer components {
+  .premium-card {
+    @apply bg-brand-surface rounded-2xl shadow-premium border border-brand-border;
+    @apply transition-all duration-300;
+  }
+  
+  .premium-card-hover {
+    @apply hover:shadow-premium-hover hover:-translate-y-1;
+  }
+  
+  .section-header {
+    @apply font-serif text-display-2 text-brand-primary mb-4;
+  }
+  
+  .gold-accent {
+    @apply relative;
+  }
+  
+  .gold-accent::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-16 h-1 bg-brand-gold rounded-full;
+  }
+  
+  .premium-button {
+    @apply px-8 py-3 rounded-xl font-semibold transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .premium-button-primary {
+    @apply premium-button bg-brand-primary text-white;
+    @apply hover:bg-brand-primary/90 hover:shadow-gold;
+  }
+  
+  .premium-button-secondary {
+    @apply premium-button bg-brand-secondary text-white;
+    @apply hover:bg-brand-secondary/90 hover:shadow-lg;
+  }
+  
+  .premium-button-ghost {
+    @apply premium-button bg-transparent text-brand-primary border-2 border-brand-primary;
+    @apply hover:bg-brand-primary hover:text-white;
+  }
+  
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@layer utilities {
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

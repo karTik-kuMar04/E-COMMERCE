@@ -62,6 +62,7 @@ export default function LoginPage() {
   const onSubmit = async (values) => {
     try {
       const res = await login(values.email.trim(), values.password);
+      console.log(res)
 
       await authLogin({ user: res.user });
 

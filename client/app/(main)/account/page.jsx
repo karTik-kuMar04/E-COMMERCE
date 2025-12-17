@@ -11,18 +11,14 @@ export default function AccountPage() {
   const router = useRouter();
   const { user, isAuthenticated } = useAuthStore();
 
+
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState({
     name: '',
     email: ''
   });
-  // Redirect if not logged in
   useEffect(() => {
-    if (!isAuthenticated) {
-      router.replace('/auth/login?redirect=/account');
-      return;
-    }
-
+    console.log(user)
     if (user) {
       setProfile({
         name: user.name || '',
@@ -76,8 +72,8 @@ export default function AccountPage() {
           </div>
 
           <Input
-            label="Full Name"
-            value={profile.name}
+            label="Name"
+            value={profile.name.toUpperCase()}
             disabled
           />
 

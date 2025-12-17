@@ -8,10 +8,11 @@ const useAuthStore = create((set) => ({
   isAuthenticated: false,
   token: null,
 
-  
   init: async () => {
     try {
-      const res = await apiClient.get("/user/profile", {}, {withCredentials:true});
+      const res = await apiClient.get("/user/profile", {
+        withCredentials:true,
+      });
       
       if (res?.user) {
         set({ user: res.user, isAuthenticated: true });

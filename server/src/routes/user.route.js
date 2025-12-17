@@ -1,11 +1,20 @@
-import { authMiddleware } from "../middlewares/auth.middleware.js";
+import authMiddleware from "../middlewares/auth.middleware.js";
 import { Router } from "express";
+import logger from "../utils/logger.js";
 
 const userRouter = Router()
 
 userRouter.get("/profile", authMiddleware, (req, res) => {
-  if (!req.user) return res.status(204).send();
-  res.status(200).json({ user: req.user });
+
+
+  return res.status(200).json({
+    user: {
+      id: req.user.id,
+      email: req.user.email,
+      name: req.user.name,
+    },
+    
+  });
 });
 
 export default userRouter;

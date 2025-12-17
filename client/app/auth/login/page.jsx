@@ -28,19 +28,17 @@ const createToast = (message, type = 'info') => ({
 
 export default function LoginPage() {
   const router = useRouter();
-
   const searchParams = useSearchParams();
+  const redirect = searchParams.get('redirect'); // use consistent key across auth pages
 
   const authLogin = useAuthStore((s) => s.login);
 
   const [showPassword, setShowPassword] = useState(false);
   const [toasts, setToasts] = useState([]);
 
-
   const {
     register,
     handleSubmit,
-    setValue,
     watch,
     formState: { errors, isSubmitting, isValid },
   } = useForm({
@@ -53,33 +51,25 @@ export default function LoginPage() {
     },
   });
 
-
-
   const pushToast = (message, type = "info") => {
-    setToasts((prev) => [...prev, createToast(message, type)])
-  }
+    setToasts((prev) => [...prev, createToast(message, type)]);
+  };
 
   const removeToast = (id) => {
     setToasts((prev) => prev.filter((toast) => toast.id !== id));
   };
 
-
-
   const onSubmit = async (values) => {
     try {
-      const res = await login(
-        values.email.trim(),
-        values.password,
-      );
-      
-      await authLogin({ user: res.user })
+      const res = await login(values.email.trim(), values.password);
+
+      await authLogin({ user: res.user });
 
       pushToast('Welcome back! Redirecting...', 'success');
-      
-      setTimeout(() => {
-        router.replace(searchParams.get('next') || '/');
-      }, 900);
 
+      setTimeout(() => {
+        router.replace(redirect || '/');
+      }, 900);
     } catch (error) {
       pushToast(error?.message || 'Invalid credentials', 'error');
     }
@@ -92,103 +82,112 @@ export default function LoginPage() {
     return '';
   }, [passwordValue]);
 
-
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-6xl mx-auto space-y-12"
+      className="min-h-screen flex items-center justify-center px-6"
     >
-      <SectionHeader>Login</SectionHeader>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <Card className="p-10 space-y-8">
-          <div>
-            <h1 className="text-display-2 font-serif text-brand-primary mb-2">Welcome back example</h1>
-            <p className="text-body text-brand-muted">
-              Sign in to manage your account, view orders, and continue checkout.
-            </p>
-          </div>
+      <div className="w-full max-w-4xl">
+        <SectionHeader>Login</SectionHeader>
 
-          <form className="space-y-6" onSubmit={handleSubmit(onSubmit)} noValidate>
-            <Input
-              label="Email"
-              type="email"
-              placeholder="you@example.com"
-              aria-label="Email address"
-              error={errors.email?.message}
-              required
-              {...register('email')}
-            />
-
-            <Input
-              label="Password"
-              type={showPassword ? 'text' : 'password'}
-              placeholder="••••••••"
-              aria-label="Account password"
-              error={errors.password?.message}
-              required
-              endAdornment={
-                <button
-                  type="button"
-                  onClick={() => setShowPassword((prev) => !prev)}
-                  className="text-brand-muted text-sm font-semibold focus:outline-none"
-                  aria-label={showPassword ? 'Hide password' : 'Show password'}
-                >
-                  {showPassword ? 'Hide' : 'Show'}
-                </button>
-              }
-              {...register('password')}
-            />
-            <p className="text-caption -mt-4" aria-live="polite">
-              {errors.password?.message ? (
-                <span className="text-red-500">{errors.password.message}</span>
-              ) : (
-                <span className="text-brand-muted">{passwordHelper || 'Password looks good!'}</span>
-              )}
-            </p>
-
-            <div className="flex items-center justify-between gap-4 flex-wrap">
-              <label className="inline-flex items-center gap-3 text-body text-brand-muted">
-                <input
-                  type="checkbox"
-                  className="w-5 h-5 rounded border-brand-border text-brand-primary focus:ring-brand-primary"
-                  aria-label="Remember me"
-                  {...register('remember')}
-                />
-                Remember me
-              </label>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <Card className="p-10 space-y-8">
+            <div>
+              <h1 className="text-display-2 font-serif text-brand-primary mb-2">Welcome back example</h1>
+              <p className="text-body text-brand-muted">
+                Sign in to manage your account, view orders, and continue checkout.
+              </p>
             </div>
 
-            <Button
-              type="submit"
-              variant="primary"
-              className="w-full flex items-center justify-center gap-3"
-              disabled={!isValid || isSubmitting}
-            >
-              {isSubmitting && (
-                <span
-                  className="inline-block w-5 h-5 border-2 border-white/60 border-t-transparent rounded-full animate-spin"
-                  aria-hidden="true"
-                />
-              )}
-              Sign in
-            </Button>
-          </form>
+            <form className="space-y-6" onSubmit={handleSubmit(onSubmit)} noValidate>
+              <Input
+                label="Email"
+                type="email"
+                placeholder="you@example.com"
+                aria-label="Email address"
+                error={errors.email?.message}
+                required
+                {...register('email')}
+              />
 
-          <div className="flex items-center justify-between flex-wrap gap-2 text-body text-brand-muted">
-            <span>Need an account?</span>
-            <Link href="/auth/register" className="text-brand-primary font-semibold underline">
-              Register now
-            </Link>
-          </div>
-        </Card>
+              <Input
+                label="Password"
+                type={showPassword ? 'text' : 'password'}
+                placeholder="••••••••"
+                aria-label="Account password"
+                error={errors.password?.message}
+                required
+                endAdornment={
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword((prev) => !prev)}
+                    className="text-brand-muted text-sm font-semibold focus:outline-none"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  >
+                    {showPassword ? 'Hide' : 'Show'}
+                  </button>
+                }
+                {...register('password')}
+              />
+              <p className="text-caption -mt-4" aria-live="polite">
+                {errors.password?.message ? (
+                  <span className="text-red-500">{errors.password.message}</span>
+                ) : (
+                  <span className="text-brand-muted">{passwordHelper || 'Password looks good!'}</span>
+                )}
+              </p>
+
+              <div className="flex items-center justify-between gap-4 flex-wrap">
+                <label className="inline-flex items-center gap-3 text-body text-brand-muted">
+                  <input
+                    type="checkbox"
+                    className="w-5 h-5 rounded border-brand-border text-brand-primary focus:ring-brand-primary"
+                    aria-label="Remember me"
+                    {...register('remember')}
+                  />
+                  Remember me
+                </label>
+              </div>
+
+              <Button
+                type="submit"
+                variant="primary"
+                className="w-full flex items-center justify-center gap-3"
+                disabled={!isValid || isSubmitting}
+              >
+                {isSubmitting && (
+                  <span
+                    className="inline-block w-5 h-5 border-2 border-white/60 border-t-transparent rounded-full animate-spin"
+                    aria-hidden="true"
+                  />
+                )}
+                Sign in
+              </Button>
+            </form>
+
+            <div className="flex items-center justify-between flex-wrap gap-2 text-body text-brand-muted">
+              <span>Need an account?</span>
+              <Link href="/auth/register" className="text-brand-primary font-semibold underline">
+                Register now
+              </Link>
+            </div>
+          </Card>
+
+          {/* Right column - info / promo card */}
+          <Card className="p-8 space-y-4 bg-brand-bg">
+            <h2 className="text-display-3 font-serif text-brand-primary">Why sign in?</h2>
+            <ul className="space-y-3 text-body text-brand-muted list-disc pl-6">
+              <li>Save and sync your favorites across devices.</li>
+              <li>Securely store checkout details for faster orders.</li>
+              <li>Track order history and delivery status anytime.</li>
+            </ul>
+          </Card>
+        </div>
+
+        <ToastContainer toasts={toasts} removeToast={removeToast} />
       </div>
-
-      <ToastContainer toasts={toasts} removeToast={removeToast} />
     </motion.section>
   );
 }
-
-

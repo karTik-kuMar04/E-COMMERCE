@@ -16,24 +16,24 @@ export const getBooks = async (req, res) => {
 
         if (search) {
             whereClauses.push(
-                `(b.title  ILIKE $${idx} OR b.subtitle ILIKE $${idx} OR b.description ILIKE $${idx})`
+                `(b.title ILIKE $${idx} OR b.subtitle ILIKE $${idx} OR b.description ILIKE $${idx})`
             );
             values.push(`%${search}%`);
             idx++;
         }
         if (genre) {
-            whereClauses.push(`b.genre == $${idx}`);
+            whereClauses.push(`b.genre = $${idx}`);
             values.push(genre);
             idx++;
         }
 
-        const whereSQL = whereClauses.length ? `WHERE ${whereClauses.join(" AND")}` : "";
+        const whereSQL = whereClauses.length ? `WHERE ${whereClauses.join(" AND ")}` : "";
 
 
         // Sorting
         let orderBy = "b.id DESC";
         
-        if (sort === "price_asc") orderBy = "min_price ASC NULL LAST";
+        if (sort === "price_asc") orderBy = "min_price ASC NULLS LAST";
         if (sort === "price_desc") orderBy = "min_price DESC NULLS LAST";
         if (sort === "title_asc") orderBy = "b.title ASC";
 
@@ -48,7 +48,7 @@ export const getBooks = async (req, res) => {
                 b.publication_date,
                 MIN(f.price) AS min_price
             FROM books b
-            LEFT JION book_formats f ON f.book_id = b.id 
+            LEFT JOIN book_formats f ON f.book_id = b.id 
             ${whereSQL}
             GROUP BY b.id
             ORDER BY ${orderBy}

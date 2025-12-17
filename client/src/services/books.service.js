@@ -6,5 +6,9 @@ export const homeBooks = async () => {
 
 
 export const getBookById = async (id) => {
-    return await apiClient.get(`/book/${id}`);
+  return await apiClient.get(`/book/${id}`);
+}
+
+export const getBooks = async (searchParams) => {
+  return await apiClient.get(`/book?${searchParams}`)
 }

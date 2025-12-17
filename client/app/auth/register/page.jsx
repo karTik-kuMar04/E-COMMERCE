@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -22,7 +22,6 @@ const passwordSchema = z
 const registerSchema = z
   .object({
     name: z.string().min(6, 'Name must be at least 6 characters'),
-    displayName: z.string().optional(),
     email: z.string().min(1, 'Email is required').email('Enter a valid email'),
     password: passwordSchema,
     confirmPassword: z.string().min(1, 'Please confirm your password'),
@@ -41,6 +40,9 @@ const createToast = (message, type = 'info') => ({
 export default function RegisterPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const pendingRedirect = searchParams.get('redirect');
+
+
 
   const authRegister = useAuthStore((s) => s.register);
 
@@ -68,9 +70,7 @@ export default function RegisterPage() {
     },
   });
 
-  useEffect(() => {
-    init();
-  }, [init]);
+
 
   const pushToast = (message, type = 'info') =>
     setToasts((prev) => [...prev, createToast(message, type)]);
@@ -82,6 +82,7 @@ export default function RegisterPage() {
   const onSubmit = async (values) => {
     try {
       const res = await registeration(values.name, values.email, values.password);
+
 
       await authRegister({ user: res.user });
 

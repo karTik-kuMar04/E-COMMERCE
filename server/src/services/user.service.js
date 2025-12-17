@@ -7,7 +7,7 @@ const createUser = async (name, email, hashedPassword, refresh_token) => {
         RETURNING id, name, email
     `;
 
-    const values = [name, email, hashedPassword]
+    const values = [name, email, hashedPassword, refresh_token]
 
     const result = await pool.query(query, values)
 
@@ -21,8 +21,8 @@ const findUserByEmail = async (email) => {
 }
 
 const updateRefreshToken = async (id, token) => {
-    const query = `UPDATE users SELECT refresh_token = $1 WHERE id = $2`;
-    await pool.query(query, [id, token]);
+    const query = `UPDATE users SET refresh_token = $1 WHERE id = $2`;
+    await pool.query(query, [token, id]);
 }
 
 export {

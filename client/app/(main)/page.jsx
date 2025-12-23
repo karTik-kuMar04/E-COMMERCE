@@ -6,6 +6,8 @@ import ProductGrid from '@/components/ui/ProductGrid';
 import { ProductCardSkeleton } from '@/components/ui/Skeleton';
 import { SectionHeader } from '@/components/ui/UI';
 import { homeBooks } from '@/services/books.service.js';
+import ProductCarousel from '@/components/ui/ProductCarousel';
+import Hero from '@/components/ui/Hero';
 
 
 export default function HomePage() {
@@ -20,6 +22,7 @@ export default function HomePage() {
         setLoading(true);
 
         const res = await homeBooks();
+        console.log(res)
         const latestBooks = res.latest
         const featuredBooks = res.featured
 
@@ -39,67 +42,54 @@ export default function HomePage() {
 
 
   return (
-    <div className="space-y-24 pb-16">
-      
+    <div className="overflow-hidden">
+
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-         
-      </motion.div>
-      
-      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <SectionHeader>Featured Books</SectionHeader>
-        {loading ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {[...Array(4)].map((_, i) => (
-              <ProductCardSkeleton key={i} />
-            ))}
-          </div>
-        ) : (
-          <ProductGrid books={featured} />
-        )}
-      </motion.section>
+        <Hero></Hero>
+      </motion.div>
+      
+      <div className='px-20 py-10'>
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          <SectionHeader lineHeight='gold-line-lg'>New Arrivals</SectionHeader>
+          {loading ? (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {[...Array(4)].map((_, i) => (
+                <ProductCardSkeleton key={i} />
+              ))}
+            </div>
+          ) : (
+            <ProductCarousel books={newArrivals} />
+          )}
+        </motion.section>
+      </div>
+      <div className="bg-white px-20 py-10">
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <SectionHeader lineHeight='gold-line-xl'>Featured Books</SectionHeader>
+          {loading ? (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {[...Array(4)].map((_, i) => (
+                <ProductCardSkeleton key={i} />
+              ))}
+            </div>
+          ) : (
+            <ProductCarousel books={featured} />
+          )}
+        </motion.section>
+      </div>
 
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        className="bg-brand-bg/50 rounded-3xl p-12 -mx-6"
-      >
-        <SectionHeader>New Arrivals</SectionHeader>
-        {loading ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {[...Array(4)].map((_, i) => (
-              <ProductCardSkeleton key={i} />
-            ))}
-          </div>
-        ) : (
-          <ProductGrid books={newArrivals} />
-        )}
-      </motion.section>
-
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        <SectionHeader>Most Popular</SectionHeader>
-        {loading ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {[...Array(4)].map((_, i) => (
-              <ProductCardSkeleton key={i} />
-            ))}
-          </div>
-        ) : (
-          <ProductGrid books={popular} />
-        )}
-      </motion.section>
+      
     </div>
   );
 }

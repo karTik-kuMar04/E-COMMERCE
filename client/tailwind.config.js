@@ -6,10 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        shimmer: {
+          '100%': { transform: 'translateX(100%)' },
+        },
+      },
       colors: {
         brand: {
           primary: '#0D3B66',
-          secondary: '#F95738',
+          secondary: '#ff431f',
           gold: '#FFB703',
           bg: '#FAF5EE',
           surface: '#FFFFFF',

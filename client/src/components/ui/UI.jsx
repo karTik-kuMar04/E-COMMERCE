@@ -152,13 +152,15 @@ export function Badge({ children, variant = 'default', className = '' }) {
   );
 }
 
-export function SectionHeader({ children, className = '' }) {
+
+export function SectionHeader({
+  children,
+  className = '',
+  lineHeight = ''
+}) {
   return (
     <div className={clsx('mb-12', className)}>
-      <h2 className="section-header gold-accent inline-block pb-2">
-        {children}
-      </h2>
+      <h2 className={`section-header pb-2 gold-accent ${lineHeight}`}>{children}</h2>
     </div>
   );
 }
-

@@ -13,14 +13,22 @@ export default function FavoritesButton({ bookId, className = '' }) {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={(e) => {
+        e.preventDefault();
         e.stopPropagation();
         toggleFavorite(bookId);
       }}
-      className={`p-2.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-brand-secondary ${
-        favorited
-          ? 'text-brand-secondary bg-brand-secondary/10'
-          : 'text-brand-muted hover:text-brand-secondary hover:bg-brand-secondary/5'
-      } ${className}`}
+      className={`p-2.5 rounded-full transition-colors 
+          focus:outline-none
+          focus-visible:ring-4
+        focus-visible:ring-brand-secondary
+          focus-visible:ring-offset-2
+        focus-visible:ring-offset-white
+          focus-visible:shadow-[0_0_0_6px_rgba(112,0,255,0.35)]
+        ${
+          favorited
+            ? 'text-brand-secondary bg-brand-secondary/10'
+            : 'text-brand-muted hover:text-brand-secondary hover:bg-brand-secondary/5'
+        } ${className}`}
       aria-label={favorited ? 'Remove from favorites' : 'Add to favorites'}
     >
       <motion.svg

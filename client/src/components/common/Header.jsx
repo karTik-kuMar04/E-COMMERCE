@@ -11,6 +11,8 @@ import useAuthStore from '@/stores/authStore';
 import CartDrawer from '../ui/CartDrawer';
 import { Button } from '../ui/UI';
 
+
+
 export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
@@ -51,7 +53,7 @@ export default function Header() {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 z-30 transition-all duration-300 ${
+        className={`sticky top-0 z-30 transition-all duration-300 border-b-[1px] border-gray-200 ${
           isScrolled
             ? 'bg-brand-surface/95 backdrop-blur-md shadow-premium'
             : 'bg-brand-surface'
@@ -62,13 +64,11 @@ export default function Header() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center">
-                <span className="text-brand-gold font-serif text-xl font-bold">
-                  B
-                </span>
+              <div className="w-[80px] h-[80px] flex items-center justify-center">
+                <img src="/inkverse-logo.png" alt=""/>
               </div>
-              <span className="text-display-3 font-serif text-brand-primary">
-                BookStore
+              <span className="text-display-3 font-serif text-brand-primary relative -top-2">
+                InkVerse
               </span>
             </Link>
 

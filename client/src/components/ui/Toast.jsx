@@ -16,7 +16,7 @@ export default function Toast({
     if (duration > 0) {
       const timer = setTimeout(() => {
         setIsVisible(false);
-        setTimeout(onClose, 250);
+        setTimeout(onClose, 100);
       }, duration);
       return () => clearTimeout(timer);
     }

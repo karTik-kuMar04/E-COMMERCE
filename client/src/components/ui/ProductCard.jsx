@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Plus, ArrowRight } from 'lucide-react';
 import { formatPrice } from '@/utils/format';
 import FavoritesButton from './FavoritesButton';
 
@@ -16,7 +15,7 @@ export default function ProductCard({ book, index = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.23, 1, 0.32, 1] }}
-      className="group relative w-full border-2 border-slate-200 hover:border-indigo-300 px-5 py-2 rounded-lg"
+      className="group relative w-full px-5 py-2 rounded-lg"
     >
       <Link href={`/books/${book.id}`} className="block relative">
         {/* --- IMAGE SECTION --- */}

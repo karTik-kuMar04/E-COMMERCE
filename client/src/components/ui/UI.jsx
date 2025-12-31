@@ -92,8 +92,8 @@ export const Input = forwardRef(function Input(
           aria-describedby={describedBy}
           className={clsx(
             'w-full px-4 py-3 rounded-xl border-2 transition-all duration-300',
-            'focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary',
-            'bg-brand-surface text-brand-primary placeholder:text-brand-muted/50',
+            'focus:outline-none',
+            'bg-brand-surface',
             error ? 'border-error' : 'border-brand-border',
             endAdornment ? 'pr-12' : '',
             className

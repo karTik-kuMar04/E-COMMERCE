@@ -53,9 +53,9 @@ export default function Header() {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 z-30 transition-all duration-300 border-b-[1px] border-gray-200 ${
+        className={`sticky top-0 z-50 transition-all duration-300 border-b-[1px] border-gray-200 ${
           isScrolled
-            ? 'bg-brand-surface/95 backdrop-blur-md shadow-premium'
+            ? 'bg-brand-surface/40 backdrop-blur-md shadow-premium'
             : 'bg-brand-surface'
         }`}
       >

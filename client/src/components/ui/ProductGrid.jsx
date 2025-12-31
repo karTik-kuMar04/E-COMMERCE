@@ -2,6 +2,7 @@
 
 import ProductCard from './ProductCard';
 import { ProductCardSkeleton } from './Skeleton';
+import SearchProductCard from './SearchProductCard';
 
 export default function ProductGrid({ books, loading = false, showQuantity = false }) {
   if (loading) {
@@ -23,9 +24,9 @@ export default function ProductGrid({ books, loading = false, showQuantity = fal
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div className="grid grid-col gap-2">
       {books.map((book, index) => (
-        <ProductCard key={book.id} book={book} showQuantity={showQuantity} index={index} />
+        <SearchProductCard key={book.id} book={book} showQuantity={showQuantity} index={index} />
       ))}
     </div>
   );

@@ -15,12 +15,30 @@ export const getBooks = async (req, res) => {
         let idx = 1;
 
         if (search) {
-            whereClauses.push(
-                `(b.title ILIKE $${idx} OR b.subtitle ILIKE $${idx} OR b.description ILIKE $${idx})`
-            );
-            values.push(`%${search}%`);
+            if (search.length < 3) {
+                // Short input → prefix match
+                whereClauses.push(`
+                (
+                    b.title ILIKE $${idx}
+                    OR b.subtitle ILIKE $${idx}
+                    OR b.authors::text ILIKE $${idx}
+                )
+                `);
+                values.push(`${search}%`);
+            } else {
+                // 3+ chars → fuzzy search
+                whereClauses.push(`
+                (
+                    similarity(b.title, $${idx}) > 0.15
+                    OR similarity(b.subtitle, $${idx}) > 0.15
+                    OR similarity(b.authors::text, $${idx}) > 0.15
+                )
+                `);
+                values.push(search);
+            }
             idx++;
         }
+
         if (genre) {
             whereClauses.push(`b.genre = $${idx}`);
             values.push(genre);
@@ -31,10 +49,15 @@ export const getBooks = async (req, res) => {
 
 
         // Sorting
-        let orderBy = "b.id DESC";
-        
-        if (sort === "price_asc") orderBy = "min_price ASC NULLS LAST";
-        if (sort === "price_desc") orderBy = "min_price DESC NULLS LAST";
+        let orderBy = search
+            ?   `similarity(b.title, $1) DESC`
+            :   `b.id DESC`
+        ;
+
+
+
+
+        if (sort === "title_asc") orderBy = "b.title ASC";
         if (sort === "title_asc") orderBy = "b.title ASC";
 
         const dataQuery = `
@@ -42,16 +65,18 @@ export const getBooks = async (req, res) => {
                 b.id,
                 b.title,
                 b.subtitle,
+                b.description,
                 b.genre,
                 b.images,
                 b.authors,
                 b.publication_date,
-                MIN(f.price) AS min_price
+                (b.publication_date >= NOW() - INTERVAL '30 days') AS is_new,
+                f.price,
+                f.stock
             FROM books b
             LEFT JOIN book_formats f ON f.book_id = b.id 
             ${whereSQL}
-            GROUP BY b.id
-            ORDER BY ${orderBy}
+            ORDER BY ${orderBy}, RANDOM()
             LIMIT $${idx} OFFSET $${idx + 1}
         `;
 

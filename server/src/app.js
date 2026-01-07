@@ -27,6 +27,10 @@ app.use(
 );
 app.use(cookieParser())
 
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store');
+  next();
+});
 
 
 

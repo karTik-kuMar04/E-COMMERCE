@@ -10,12 +10,15 @@ const useAuthStore = create((set) => ({
 
   init: async () => {
     try {
+
+      await apiClient.post("/api/auth/refresh", {}, { withCredentials: true });
+
       const res = await apiClient.get("/user/profile", {
         withCredentials:true,
       });
-      
-      if (res?.user) {
-        set({ user: res.user, isAuthenticated: true });
+
+      if (res?.data?.user) {
+        set({ user: res.data.user, isAuthenticated: true });
       } else {
         set({ user: null, isAuthenticated: false });
       }

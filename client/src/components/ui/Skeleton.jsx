@@ -2,13 +2,15 @@
 
 import clsx from 'clsx';
 
+
 export function Skeleton({ className = '', variant = 'default' }) {
   const variants = {
-    default: 'bg-brand-border animate-pulse rounded-xl',
-    text: 'bg-brand-border animate-pulse rounded h-4',
-    title: 'bg-brand-border animate-pulse rounded h-8',
-    image: 'bg-brand-border animate-pulse rounded-2xl shimmer',
-    card: 'bg-brand-border animate-pulse rounded-2xl shimmer',
+    default: 'bg-gray-200/50 animate-pulse rounded-xl', // lighter for white bg
+    text: 'bg-gray-200/50 animate-pulse rounded h-4',
+    title: 'bg-gray-200/50 animate-pulse rounded h-8',
+    image: 'bg-gray-200/50 animate-pulse rounded-2xl shimmer',
+    card: 'bg-gray-200/50 animate-pulse rounded-2xl shimmer',
+    circle: 'bg-gray-200/50 animate-pulse rounded-full', // <--- ADD THIS
   };
 
   return <div className={clsx('shimmer', variants[variant], className)} />;

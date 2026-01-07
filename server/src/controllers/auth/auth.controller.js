@@ -26,7 +26,7 @@ const register = async (req, res) => {
         res.status(201).json(
             {
                 message: "User Registered Successfully",
-                user
+
             }
         )
     } catch (err) {
@@ -73,14 +73,14 @@ const login = async (req, res) => {
             ...COOKIE_OPTIONS, 
             maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
         });
-
         res.status(201).json(
             {
                 message: "Log-in Successfully",
                 user: {
                     id: user.id,
                     name: user.name,
-                    email: user.email
+                    email: user.email,
+                    createdAt: user.created_at
                 }
             }
         )

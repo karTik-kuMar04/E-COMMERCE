@@ -1,90 +1,65 @@
 export const genres = [
   'All Genres',
-
-  // Fiction
-  'Fiction',
-  'Literary Fiction',
-  'Historical Fiction',
+  'Art',
+  'Autobiography',
+  'Biography',
+  'Business',
+  'Children’s',
+  'Classics',
+  'Comics',
   'Contemporary Fiction',
-
-  // Fantasy & Sci-Fi
-  'Fantasy',
-  'High Fantasy',
-  'Dark Fantasy',
-  'Urban Fantasy',
-  'Sci-Fi',
-  'Sci-Fi & Fantasy',
-  'Dystopian',
-  'Cyberpunk',
-  'Space Opera',
-
-  // Mystery / Thriller / Horror
-  'Mystery',
-  'Thriller',
-  'Mystery & Thriller',
   'Crime',
+  'Culture',
+  'Cyberpunk',
+  'Dark Fantasy',
+  'Design',
   'Detective',
+  'Dystopian',
+  'Economics',
+  'Education',
+  'Fantasy',
+  'Finance',
+  'Fiction',
+  'Food & Cooking',
+  'Graphic Novels',
+  'Health & Fitness',
+  'High Fantasy',
+  'Historical Fiction',
+  'History',
   'Horror',
+  'Light Novel',
+  'Literary Fiction',
+  'Manga',
+  'Marketing',
+  'Memoir',
+  'Middle Grade',
+  'Music',
+  'Mystery',
+  'Mystery & Thriller',
+  'Mythology',
+  'Non-Fiction',
+  'Personal Development',
+  'Philosophy',
+  'Photography',
+  'Poetry',
+  'Politics',
   'Psychological Thriller',
-
-  // Romance
+  'Religion',
   'Romance',
   'Romantic Comedy',
   'Romantic Suspense',
-
-  // Young Readers
-  'Young Adult',
-  'Children’s',
-  'Middle Grade',
-
-  // Non-Fiction
-  'Non-Fiction',
-  'Biography',
-  'Autobiography',
-  'Memoir',
-  'Self-Help',
-  'Personal Development',
-  'Psychology',
-  'Philosophy',
-
-  // Educational / Informational
-  'Education',
+  'Sci-Fi',
+  'Sci-Fi & Fantasy',
   'Science',
-  'Technology',
-  'Business',
-  'Economics',
-  'Finance',
-  'Marketing',
-
-  // History / Culture
-  'History',
-  'Politics',
+  'Self-Help',
+  'Short Stories',
   'Sociology',
-  'Culture',
-
-  // Art & Lifestyle
-  'Art',
-  'Design',
-  'Photography',
-  'Music',
-  'Travel',
-  'Food & Cooking',
-  'Health & Fitness',
-
-  // Comics / Manga
-  'Comics',
-  'Graphic Novels',
-  'Manga',
-  'Light Novel',
-  'Webtoon',
-
-  // Religion & Spirituality
-  'Religion',
+  'Space Opera',
   'Spirituality',
-  'Mythology',
-
-  // Poetry & Classics
-  'Poetry',
-  'Classics',
-  'Short Stories'
+  'Technology',
+  'Thriller',
+  'Travel',
+  'Urban Fantasy',
+  'Webtoon',
+  'Young Adult'
 ];

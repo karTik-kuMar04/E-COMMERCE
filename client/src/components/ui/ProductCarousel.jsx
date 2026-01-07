@@ -40,7 +40,7 @@ export default function ProductCarousel({ books }) {
         }}
         className="overflow-hidden"
       >
-        {books.map((book, index) => (
+        {Array.isArray(books) && books.map((book, index) => (
           <SwiperSlide key={book.id}>
             <ProductCard book={book} index={index} />
           </SwiperSlide>

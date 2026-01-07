@@ -55,7 +55,7 @@ export default function BookDetailPage() {
     const fetchBook = async () => {
       try {
         const res = await getBookById(id);
-        setBook(res);
+        setBook(res.data);
       } catch (err) {
         console.error(err);
       }

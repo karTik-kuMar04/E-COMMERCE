@@ -23,8 +23,8 @@ export default function HomePage() {
 
         const res = await homeBooks();
         console.log(res)
-        const latestBooks = res.latest
-        const featuredBooks = res.featured
+        const latestBooks = res.data.latest
+        const featuredBooks = res.data.featured
 
         setFeatured(featuredBooks);
         setNewArrivals(latestBooks);

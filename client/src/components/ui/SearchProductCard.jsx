@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import { ShoppingCart, Bell, Star, BookOpen } from 'lucide-react';
 import { formatPrice } from '@/utils/format';
 import FavoritesButton from './FavoritesButton';
+import apiClient from '@/lib/apiClient';
+import { useToast } from 'src/context/ToastContext';
 
 export default function SearchProductCard({ book, index = 0 }) {
   const price = book.price || 0;
@@ -14,6 +16,27 @@ export default function SearchProductCard({ book, index = 0 }) {
   const isNew = book.is_new || false;
   const rating = book.rating || 4.5;
   const reviewCount = book.reviewCount || 120;
+
+  const { addToast } = useToast();
+
+  const handleAddToCart = async (bookId) => {
+    try {
+        const res = await apiClient.post("/user/cart", { bookId });
+        if (res.data.success) {
+            addToast({ type: "success", message: res.data.message });
+        } else {
+            addToast({ type: "warning", message: res.data.message });
+        }
+
+    } catch (error) {
+        const message = error?.responce?.data?.message || "Something went wrong. Please try again";
+        addToast({
+            type: "error",
+            message: message
+        })
+    }
+  }
+
 
   return (
     <motion.div
@@ -121,7 +144,7 @@ export default function SearchProductCard({ book, index = 0 }) {
                   <button
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log('Added to cart', book.id);
+                      handleAddToCart(book.id);
                     }}
                     // REDESIGN: Hover state now introduces brand color instead of just gray
                     className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border-2 border-slate-200 text-slate-700 font-semibold text-sm hover:border-indigo-600 hover:text-indigo-600 hover:bg-indigo-50 transition-all active:scale-95"

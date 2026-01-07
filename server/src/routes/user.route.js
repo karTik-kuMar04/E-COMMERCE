@@ -1,6 +1,6 @@
 import authMiddleware from "../middlewares/auth.middleware.js";
 import { Router } from "express";
-import logger from "../utils/logger.js";
+import { addToCart, addToFavorites } from "../controllers/index.js";
 
 const userRouter = Router()
 
@@ -12,9 +12,14 @@ userRouter.get("/profile", authMiddleware, (req, res) => {
       id: req.user.id,
       email: req.user.email,
       name: req.user.name,
+      createdAt: req.user.created_at
     },
     
   });
 });
+
+userRouter.post("/cart", authMiddleware, addToCart);
+userRouter.post("/favorites", authMiddleware, addToFavorites);
+
 
 export default userRouter;

@@ -5,39 +5,40 @@ async function addToCart (req, res) {
     const client = await pool.connect();
     try {
         const userId = req.user.id;
-        const { bookId } = req.body;
+        const { formatId, quantity = 1 } = req.body;
 
-        if(!bookId) {
-            logger.error("addToCart failed: bookId missing in request body");
+        if(!formatId) {
+            logger.error("addToCart failed: formatId missing in request body");
             return res.status(400).json({
                 success: false,
                 message: "Unable to add item to cart. Please try again"
             });
         };
 
-        const query = `
-            UPDATE users
-            SET cart = (
-                SELECT jsonb_agg(DISTINCT value)
-                FROM jsonb_array_elements(
-                    COALESCE(cart, '[]'::jsonb) || jsonb_build_array($1::uuid)
-                )
-            )
-            WHERE id = $2
-            RETURNING cart;
-        `;
+        const formatCheck = await client.query(
+            `SELECT id FROM book_formats WHERE id = $1`,
+            [formatId]
+        )
 
-        const values = [bookId, userId];
-
-        const result = await client.query(query, values);
-
-        if (result.rowCount === 0){
-            logger.error(`addToCart failed: user not found (userId=${userId})`);
-            return res.status(401).json({
+        if (formatCheck.rowCount === 0) {
+            return res.status(404).json({
                 success: false,
-                message: "Your session has expired. Please log in again."
+                message: "Book format not found"
             });
         }
+
+        const query = `
+            INSERT INTO cart_items (user_id, format_id, quantity)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (user_id, format_id)
+            DO UPDATE SET quantity = cart_items.quantity + EXCLUDED.quantity
+            RETURNING quantity;
+        `;
+
+
+        const values = [userId, formatId, quantity];
+
+        await client.query(query, values);
 
         return res.status(200).json({
             success: true,
@@ -70,13 +71,12 @@ async function addToFavorites (req, res) {
         };
 
         const query = `
-            UPDATE users 
-            SET favorites = (
-                SELECT jsonb_agg(DISTINCT value)
-                FROM jsonb_array_elements(
-                    COALESCE(favorites, '[]'::jsonb) || jsonb_build_array($1::uuid)
-                )
-            )
+            UPDATE users
+            SET favorites = CASE
+                WHEN favorites @> jsonb_build_array($1::uuid)
+                THEN favorites - $1::text
+                ELSE favorites || jsonb_build_array($1::uuid)
+            END
             WHERE id = $2
             RETURNING favorites;
         `;

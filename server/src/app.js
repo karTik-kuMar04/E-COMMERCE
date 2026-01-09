@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser'
 import authRouter from './routes/auth.route.js';
 import userRouter from './routes/user.route.js';
 import bookRouter from './routes/books.route.js';
+import systemRouter from './routes/system.route.js';
 
 const app = express();
 
@@ -18,7 +19,7 @@ app.use(helmet({
 }))
 app.use(
   cors({
-    origin: env.CORS_ORIGIN, // must be exactly http://localhost:3000
+    origin: env.CORS_ORIGIN,
     credentials: true,       // REQUIRED for cookies
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type"],
@@ -37,13 +38,15 @@ app.use((req, res, next) => {
 {/** ROUTEs */}
 
 // Auth Route
-app.use("/api/auth", authRouter)
+app.use("/api/auth", authRouter);
 
 // User Routes
-app.use("/user", userRouter)
+app.use("/user", userRouter);
 
 // Books Routes
-app.use('/book', bookRouter)
+app.use('/book', bookRouter);
+
+app.use("/api/system", systemRouter);
 
 // /health check
 app.get('/health', (_, res) => {

@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Link from 'next/link';
+import { Bug } from 'lucide-react'; // Make sure to import an icon if you want one
 
-const Hero = () => {
+// 👇 1. UPDATE: Accept the 'onOpenBugReport' prop here
+const Hero = ({ onOpenBugReport }) => {
   const containerRef = useRef(null);
 
   // Advanced: Mouse tracking for subtle parallax on the image stack
@@ -24,6 +26,28 @@ const Hero = () => {
       onMouseMove={handleMouseMove}
       className="select-none relative min-h-screen w-full bg-white flex items-center justify-center overflow-hidden px-6 py-20"
     >
+      {/* 👇 2. NEW: The Trigger Button (Top Right Corner) */}
+      <motion.button
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ delay: 1 }}
+        onClick={onOpenBugReport}
+        className="absolute top-24 right-6 lg:top-8 lg:right-8  flex items-center gap-3 px-6 py-3 bg-slate-900 hover:bg-indigo-600 text-white rounded-full shadow-xl shadow-indigo-900/20 border border-slate-700 hover:border-indigo-500 transition-all cursor-pointer group"
+      >
+        {/* The Pinging Dot Effect */}
+        <span className="relative flex h-3 w-3">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-indigo-400 group-hover:bg-white transition-colors"></span>
+        </span>
+
+        <span className="text-sm font-bold tracking-wide">
+          Report Bug
+        </span>
+      </motion.button>
+
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT CONTENT: Typography & CTA */}

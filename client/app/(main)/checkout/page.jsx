@@ -9,6 +9,9 @@ import { formatPrice, generateOrderId, getEstimatedDelivery } from '@/utils/form
 import { Input, Button, Card, SectionHeader } from '@/components/ui/UI';
 import Modal from '@/components/ui/Modal';
 import { Skeleton } from '@/components/ui/Skeleton';
+import { checkoutCartApi } from '@/services/checkout.service';
+import { useToast } from 'src/contexts/ToastContext';
+
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -53,16 +56,29 @@ export default function CheckoutPage() {
     setStep(3);
   };
 
+  const { addToast } = useToast();
+
   const handlePlaceOrder = async () => {
-    await new Promise(resolve => setTimeout(resolve, 800));
-    const newOrderId = generateOrderId();
-    const estimatedDelivery = getEstimatedDelivery();
-    
-    setOrderId(newOrderId);
-    setDeliveryDate(estimatedDelivery);
-    setOrderConfirmed(true);
-    clearCart();
+    try {
+      const res = await checkoutCartApi();
+
+      if (res.data.success) {
+        setOrderId(res.data.orderId);
+        setDeliveryDate(getEstimatedDelivery());
+        setOrderConfirmed(true);
+        clearCart();
+      } else {
+        addToast({ type: "error", message: res.data.message });
+      }
+
+    } catch (err) {
+      addToast({
+        type: "error",
+        message: err?.response?.data?.message || "Checkout failed"
+      });
+    }
   };
+
 
   useEffect(() => {
     if (!user || hasPrefilled) return;

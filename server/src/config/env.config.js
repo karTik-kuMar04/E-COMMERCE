@@ -32,7 +32,10 @@ const env = {
     // Cloudinary Secrets
     CLOUDINARY_NAME: requireENV("CLOUDINARY_NAME"),
     CLOUDINARY_API_KEY: requireENV("CLOUDINARY_KEY"),
-    CLOUDINARY_API_SECRET: requireENV("CLOUDINARY_SECRET")
+    CLOUDINARY_API_SECRET: requireENV("CLOUDINARY_SECRET"),
+
+    ADMIN_EMAIL: requireENV("ADMIN_EMAIL"),
+    EMAIL_PASS: requireENV("EMAIL_PASS") 
 }
 
 export default env

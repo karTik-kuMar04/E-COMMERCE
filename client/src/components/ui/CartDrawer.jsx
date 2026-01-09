@@ -9,19 +9,65 @@ import useCartStore from '@/stores/cartStore';
 import { formatPrice } from '@/utils/format';
 import QuantityStepper from './QuantityStepper';
 import { Button } from './UI';
+import { useSyncCart } from '@/hooks/useSyncCart';
+import apiClient from '@/lib/apiClient';
+import { useToast } from 'src/contexts/ToastContext';
+import { checkoutCartApi } from "@/services/checkout.service";
+import { useRouter } from 'next/navigation';
+
+
 
 export default function CartDrawer({ isOpen, onClose }) {
-  const { items, removeItem, updateQuantity, getTotal } = useCartStore();
+  const router = useRouter();
+  const { items, getTotal } = useCartStore();
   const [isRemoving, setIsRemoving] = useState(null);
+  const { addToast } = useToast();
+  const syncCart = useSyncCart();
 
-  const handleRemove = async (bookId, format) => {
-    const key = `${bookId}-${format}`;
-    setIsRemoving(key);
-    // slight delay for animation
-    await new Promise(resolve => setTimeout(resolve, 300));
-    removeItem(bookId, format);
-    setIsRemoving(null);
+  const handleRemove = async (formatId) => {
+    try {
+      await apiClient.delete(`/user/cart/${formatId}`);
+      await syncCart();
+    } catch (err) {
+      addToast({type: "error", message: err?.response?.data?.message || "something went wrong"});
+      console.log(err)
+    }
   };
+
+  const handleQuantityChange = async (formatId, qty) => {
+    if (!formatId) return;
+
+    try {
+      await apiClient.patch("/user/cart", {
+        format_id: formatId,
+        quantity: qty
+      });
+
+      await syncCart();
+    } catch (err) {
+      addToast({
+        type: "error",
+        message:
+          err?.response?.data?.message ||
+          "Failed to update quantity"
+      });
+    }
+  };
+
+
+  const handleCheckout = async () => {
+    try {
+      const res = await checkoutCartApi();
+      if (res.data.success) {
+        await syncCart();
+        onClose();
+        router.push(`/order-success?orderId=${res.data.orderId}`);
+      }
+    } catch (err) {
+      addToast({ type: "error", message: "Checkout failed" });
+    }
+  };
+
 
   const total = getTotal();
 
@@ -36,7 +82,6 @@ export default function CartDrawer({ isOpen, onClose }) {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50"
             onClick={onClose}
-            aria-hidden="true"
           />
 
           {/* Drawer */}
@@ -45,70 +90,64 @@ export default function CartDrawer({ isOpen, onClose }) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 h-full w-full sm:w-[480px] bg-white shadow-2xl z-50 flex flex-col border-l border-gray-100"
+            className="fixed right-0 top-0 h-full w-full sm:w-[480px] bg-white shadow-2xl z-50 flex flex-col border-l"
           >
-            {/* Decorative Top Line */}
-            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-teal-400" />
+            {/* Top gradient */}
+            <div className="h-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-teal-400" />
 
-            {/* --- Header --- */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 bg-white">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-5 border-b">
               <div className="flex items-center gap-3">
-                <ShoppingBag className="text-brand-primary" size={24} />
-                <h2 className="text-2xl font-serif font-bold text-gray-900">Your Cart</h2>
-                <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded-full">
+                <ShoppingBag size={22} />
+                <h2 className="text-xl font-bold">Your Cart</h2>
+                <span className="bg-gray-100 text-xs font-bold px-2 py-1 rounded-full">
                   {items.length}
                 </span>
               </div>
               <button
                 onClick={onClose}
-                className="p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all"
+                className="p-2 hover:bg-gray-100 rounded-full"
               >
-                <X size={24} />
+                <X size={22} />
               </button>
             </div>
 
-            {/* --- Cart Items --- */}
-            <div className="flex-1 overflow-y-auto px-6 py-4 bg-gray-50/30">
+            {/* Cart items */}
+            <div className="flex-1 overflow-y-auto px-6 py-4 bg-gray-50/40">
               {items.length === 0 ? (
-                <div className="h-full flex flex-col items-center justify-center text-center space-y-4 opacity-80">
-                  <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 mb-2">
-                    <ShoppingBag size={32} />
+                <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
+                  <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center">
+                    <ShoppingBag size={30} />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">Your cart is empty</h3>
-                  <p className="text-gray-500 max-w-[250px]">
-                    Looks like you haven't added any magical reads to your collection yet.
+                  <h3 className="text-lg font-medium">Your cart is empty</h3>
+                  <p className="text-gray-500 max-w-[260px]">
+                    Add some books to see them here.
                   </p>
-                  <Link
-                    href={'/books'}
-                  >
-                    <Button
-                      variant="primary" 
-                      onClick={onClose} 
-                      className="mt-4"
-                    >
-                      Start Browsing
-                    </Button>
+                  <Link href="/books" onClick={onClose}>
+                    <Button className="mt-3">Start Browsing</Button>
                   </Link>
                 </div>
               ) : (
-                <ul className="space-y-6 pb-6">
+                <ul className="space-y-5 pb-6">
                   <AnimatePresence initial={false}>
                     {items.map((item) => (
                       <motion.li
-                        key={`${item.bookId}-${item.format}`}
+                        key={item.formatId}
                         layout
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, x: -50, transition: { duration: 0.2 } }}
-                        className={`group relative flex gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${
-                          isRemoving === `${item.bookId}-${item.format}` ? 'opacity-50 pointer-events-none' : ''
+                        exit={{ opacity: 0, x: -40 }}
+                        className={`flex gap-4 p-4 bg-white rounded-2xl border shadow-sm ${
+                          isRemoving === item.formatId
+                            ? 'opacity-50 pointer-events-none'
+                            : ''
                         }`}
                       >
-                        {/* Book Cover */}
-                        <div className="relative w-20 aspect-[2/3] flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden shadow-sm">
+                        {/* Cover */}
+                        <div className="relative w-20 aspect-[2/3] rounded-lg overflow-hidden bg-gray-200">
                           <Image
-                            src={item.coverImage || '/assets/covers/placeholder.jpg'}
-                            alt={item.bookTitle}
+                            src={item.images?.cover || '/assets/covers/placeholder.jpg'}
+                            alt={item.title}
                             fill
                             className="object-cover"
                             sizes="80px"
@@ -119,32 +158,43 @@ export default function CartDrawer({ isOpen, onClose }) {
                         <div className="flex-1 flex flex-col justify-between min-w-0">
                           <div>
                             <div className="flex justify-between items-start gap-2">
-                              <h3 className="font-serif font-bold text-gray-900 leading-tight line-clamp-2">
-                                {item.bookTitle}
+                              <h3 className="font-semibold leading-tight line-clamp-2">
+                                {item.title}
                               </h3>
                               <button
-                                onClick={() => handleRemove(item.bookId, item.format)}
-                                className="text-gray-400 hover:text-red-500 transition-colors p-1"
-                                title="Remove item"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleRemove(item.formatId);
+                                }}
+                                className="text-gray-400 hover:text-red-500"
                               >
                                 <Trash2 size={18} />
                               </button>
                             </div>
-                            <p className="text-sm text-gray-500 mt-1 capitalize">{item.format}</p>
+
+                            {item.authors?.length > 0 && (
+                              <p className="text-sm text-gray-500 mt-1">
+                                {item.authors.join(', ')}
+                              </p>
+                            )}
+                            <p className="text-xs text-gray-500">
+                              Format: {item.format}
+                            </p>
+
                           </div>
 
                           <div className="flex items-end justify-between mt-3">
-                            <div className="scale-90 origin-bottom-left">
-                                {/* Assuming QuantityStepper handles its own styles, 
-                                    but wrapped to fit sizing */}
-                                <QuantityStepper
-                                  value={item.quantity}
-                                  onChange={(qty) => updateQuantity(item.bookId, item.format, qty)}
-                                  max={item.stock || Infinity}
-                                />
-                            </div>
-                            <p className="font-bold text-lg text-brand-primary">
-                              {formatPrice(item.price * item.quantity)}
+                            <QuantityStepper
+                              value={item.quantity}
+                              onChange={(qty) =>
+                                handleQuantityChange(item.formatId, qty)
+                              }
+                            />
+
+                            <p className="font-bold text-lg">
+                              {item.price
+                                ? formatPrice(item.price * item.quantity)
+                                : '—'}
                             </p>
                           </div>
                         </div>
@@ -155,34 +205,30 @@ export default function CartDrawer({ isOpen, onClose }) {
               )}
             </div>
 
-            {/* --- Footer / Checkout --- */}
+            {/* Footer */}
             {items.length > 0 && (
-              <div className="p-6 bg-white border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,0,0,0.02)] z-10">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Subtotal</span>
-                    <span className="text-2xl font-serif font-bold text-gray-900">
-                      {formatPrice(total)}
-                    </span>
-                  </div>
-                  
-                  <Link href="/checkout" onClick={onClose} className="block">
-                    <Button 
-                      variant="primary" 
-                      size="lg" 
-                      className="w-full flex justify-between items-center group py-4 text-base"
-                    >
-                      <span>Checkout</span>
-                      <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                  
-                  <Link href="/cart" onClick={onClose} className="block text-center">
-                    <span className="text-sm text-gray-500 hover:text-brand-primary transition-colors font-medium">
-                      View full cart
-                    </span>
-                  </Link>
+              <div className="p-6 border-t bg-white">
+                <div className="flex justify-between items-center mb-4">
+                  <span className="text-gray-500 text-sm">Subtotal</span>
+                  <span className="text-2xl font-bold">
+                    {formatPrice(total)}
+                  </span>
                 </div>
+
+                
+                  <Button onClick={handleCheckout} className="w-full flex justify-between items-center py-4">
+                    <span>Checkout</span>
+                    <ArrowRight size={18} />
+                  </Button>
+
+
+                <Link
+                  href="/cart"
+                  onClick={onClose}
+                  className="block text-center mt-3 text-sm text-gray-500 hover:text-black"
+                >
+                  View full cart
+                </Link>
               </div>
             )}
           </motion.div>

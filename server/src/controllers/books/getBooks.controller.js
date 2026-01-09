@@ -71,13 +71,22 @@ export const getBooks = async (req, res) => {
                 b.authors,
                 b.publication_date,
                 (b.publication_date >= NOW() - INTERVAL '30 days') AS is_new,
-                f.price,
-                f.stock
+                json_agg(
+                    json_build_object(
+                    'formatId', f.id,
+                    'format', f.format,
+                    'price', f.price,
+                    'stock', f.stock
+                    )
+                    ORDER BY f.price ASC
+                ) AS formats
             FROM books b
-            LEFT JOIN book_formats f ON f.book_id = b.id 
+            JOIN book_formats f ON f.book_id = b.id
             ${whereSQL}
-            ORDER BY ${orderBy}, RANDOM()
-            LIMIT $${idx} OFFSET $${idx + 1}
+            GROUP BY b.id
+            ORDER BY ${orderBy}
+            LIMIT $${idx} OFFSET $${idx + 1};
+
         `;
 
         values.push(limit, offset);

@@ -2,11 +2,31 @@
 
 import { motion } from 'framer-motion';
 import useFavoriteStore from '@/stores/favoriteStore';
+import apiClient from '@/lib/apiClient';
+import { useToast } from 'src/contexts/ToastContext';
+
 
 export default function FavoritesButton({ bookId, className = '' }) {
   const { isFavorite, toggleFavorite } = useFavoriteStore();
-
+  const { addToast } = useToast();
   const favorited = isFavorite(bookId);
+
+  const handleToggleFavorite = async () => {
+    try {
+      await toggleFavorite(bookId);
+
+      addToast({
+        type: "success",
+        message: favorited ? "Removed from favorites" : "Added to favorites"
+      });
+
+    } catch (err) {
+      addToast({
+        type: "error",
+        message: "Failed to update favorites"
+      });
+    }
+  };
 
   return (
     <motion.button
@@ -15,7 +35,7 @@ export default function FavoritesButton({ bookId, className = '' }) {
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
-        toggleFavorite(bookId);
+        handleToggleFavorite(bookId);
       }}
       className={`p-2.5 rounded-full transition-colors 
           focus:outline-none

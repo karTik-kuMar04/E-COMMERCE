@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { 
-  Star, Share2, ShieldCheck, Truck, Zap, Download, 
+  Star, ShieldCheck, Truck, Download, 
   CreditCard, Award, Tag, ShoppingCart, ChevronRight 
 } from 'lucide-react';
 import ImageCarousel from '@/components/ui/ImageCarousel';
@@ -15,6 +15,11 @@ import { formatPrice, formatDate } from '@/utils/format';
 import ReactMarkdown from 'react-markdown';
 import { getBookById } from '@/services/books.service';
 import { ToastContainer } from '@/components/ui/Toast';
+import apiClient from '@/lib/apiClient';
+import { useSyncCart } from '@/hooks/useSyncCart';
+import { useToast } from 'src/contexts/ToastContext';
+import { checkoutSingleBookApi } from '@/services/checkout.service';
+
 
 
 
@@ -33,8 +38,10 @@ export default function BookDetailPage() {
   const [selectedFormat, setSelectedFormat] = useState(null);
   const [quantity, setQuantity] = useState(1);
   
-  const { addItem, items } = useCartStore();
-
+  const items = useCartStore(state => state.items);
+  const syncCart = useSyncCart();
+  const { addToast } = useToast();
+  const [ adding, setAdding ] = useState(false);
 
   const [toasts, setToasts] = useState([]);
   const pushToast = (message, type = "info") => {
@@ -78,7 +85,9 @@ export default function BookDetailPage() {
     ...(book.images?.interior || []),
   ].filter(Boolean);
 
-  const isInCart = items.some(item => item.bookId === book.id && item.format === formatOption?.format);
+  const isInCart = items.some(item => item.formatId === formatOption?.id);
+
+
   const stock = formatOption?.stock || 0;
   const isOutOfStock = stock === 0;
   const maxQuantity = stock ?? 10;
@@ -90,15 +99,54 @@ export default function BookDetailPage() {
   // Filter out "no award" strings if they exist
   const validAwards = book.awards?.filter(a => a.toLowerCase() !== 'no award') || [];
 
-  const handleAddToCart = () => {
-    addItem(book, formatOption.format, quantity);
+
+  const handleAddToCart = async () => {
+    if ( !formatOption || isInCart || adding ) return;
+
+    setAdding(true);
+    try {
+      const res = await apiClient.post("/user/cart", {
+        formatId: formatOption.id
+      })
+
+      if (res.data.success) {
+        await syncCart();
+        addToast({ type: 'success', message: res.data.message });
+      } else {
+        addToast({ type: 'warning', message: res.data.message });
+      }
+    } catch (err) {
+      addToast({
+        type: 'error',
+        message:
+          err?.response?.data?.message ||
+          'Something went wrong. Please try again'
+      });
+    } finally {
+      setAdding(false);
+    }
   };
 
-  const handleBuyNow = () => {
-    addItem(book, formatOption.format, quantity);
-    router.push('/checkout');
+  const handleBuyNow = async () => {
+    if (!formatOption) return;
+
+    try {
+      const res = await checkoutSingleBookApi(formatOption.id, quantity);
+
+      if (res.data.success) {
+        router.push(`/order-success?orderId=${res.data.orderId}`);
+      } else {
+        addToast({ type: "error", message: res.data.message });
+      }
+
+    } catch (err) {
+      addToast({
+        type: "error",
+        message: err?.response?.data?.message || "Checkout failed"
+      });
+    }
   };
-   console.log(book)
+
 
   return (
     <div className="min-h-screen bg-white pb-24 pt-8">
@@ -143,7 +191,7 @@ export default function BookDetailPage() {
                   </>
                 )}
 
-                <FavoritesButton className='absolute right-0'/>
+                <FavoritesButton className='absolute right-0' bookId={book.id}/>
               </div>
 
               <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight mb-2">
@@ -222,8 +270,8 @@ export default function BookDetailPage() {
                  </div>
                </div>
 
-               {/* BUTTON ACTION AREA */}
-               {isDigital ? (
+                {/* BUTTON ACTION AREA */}
+                {isDigital ? (
                   <button
                   type='button'
                     onClick={() =>
@@ -251,7 +299,7 @@ export default function BookDetailPage() {
                        {/* Add To Cart */}
                        <button 
                           onClick={handleAddToCart}
-                          disabled={isOutOfStock}
+                          disabled={isOutOfStock || isInCart || adding}
                           className={`flex-1 flex items-center justify-center gap-2 font-bold rounded-full border-2 transition-all active:scale-95
                             ${isInCart 
                               ? 'bg-green-50 border-green-500 text-green-700' 
@@ -259,14 +307,14 @@ export default function BookDetailPage() {
                             } disabled:opacity-50 disabled:cursor-not-allowed`}
                        >
                           <ShoppingCart size={20} />
-                          {isInCart ? 'Added to Cart' : 'Add to Cart'}
+                          {isInCart ? 'Added to Cart' : adding ? 'Adding to Cart' : "Add to Cart"}
                        </button>
                     </div>
 
                     {/* Bottom Row: Buy Now */}
                     {stock > 0 && (
                       <button 
-                         onClick={handleBuyNow}
+                        onClick={handleBuyNow}
                          className="w-full h-12 bg-[#7000ff] hover:bg-[#5a00cc] text-white font-bold rounded-full shadow-lg shadow-indigo-200 flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5 active:scale-95"
                       >
                          <CreditCard size={20} />

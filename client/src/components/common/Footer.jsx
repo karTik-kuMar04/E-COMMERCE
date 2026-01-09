@@ -101,10 +101,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-serif text-lg font-semibold mb-6">Explore</h3>
             <ul className="space-y-4">
-              {['Browse Books', 'Best Sellers', 'New Arrivals', 'Featured Authors'].map((item) => (
+              {[{name: 'Featured Books', link: "featured-book"}, {name: 'New Arrivals', link: "new-arrivals"}].map((item) => (
                 <li key={item}>
-                    <Link href="/books" className="text-sm text-gray-400 hover:text-indigo-400 hover:pl-2 transition-all duration-300 inline-block">
-                        {item}
+                    <Link href={`/#${item.link}`} className="text-sm text-gray-400 hover:text-indigo-400 hover:pl-2 transition-all duration-300 inline-block">
+                        {item.name}
                     </Link>
                 </li>
               ))}
@@ -115,11 +115,6 @@ export default function Footer() {
            <div>
             <h3 className="text-white font-serif text-lg font-semibold mb-6">My Account</h3>
             <ul className="space-y-4">
-              <li>
-                <Link href="/favorites" className="text-sm text-gray-400 hover:text-indigo-400 transition-colors">
-                  My Favorites
-                </Link>
-              </li>
               <li>
                 <Link href="/cart" className="text-sm text-gray-400 hover:text-indigo-400 transition-colors">
                   Shopping Cart

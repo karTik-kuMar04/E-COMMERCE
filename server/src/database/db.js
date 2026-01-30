@@ -5,6 +5,7 @@ const { Pool } = pkg;
 const pool = new Pool({
   connectionString: env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
+  options: '-c search_path=public'
 });
 
 export default pool;

@@ -30,9 +30,7 @@ const env = {
     JWT_REFRESH_SECRET: requireENV("JWT_REFRESH_SECRET"),
 
     // Cloudinary Secrets
-    CLOUDINARY_NAME: requireENV("CLOUDINARY_NAME"),
-    CLOUDINARY_API_KEY: requireENV("CLOUDINARY_KEY"),
-    CLOUDINARY_API_SECRET: requireENV("CLOUDINARY_SECRET"),
+    DATABASE_URL: requireENV("DATABASE_URL"),
 
     ADMIN_EMAIL: requireENV("ADMIN_EMAIL"),
     EMAIL_PASS: requireENV("EMAIL_PASS") 

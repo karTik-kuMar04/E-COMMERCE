@@ -63,7 +63,7 @@ const login = async (req, res) => {
         const COOKIE_OPTIONS = {
             httpOnly: true,
             secure: true,       // false in development (http), true only in production (https)
-            sameSite: "lax",
+            sameSite: "none",
             path: "/",
         };
 
